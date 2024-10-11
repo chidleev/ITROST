@@ -1,0 +1,63 @@
+[2024-08-10T10:01:36.533Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/hardSkillsHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/hardskills
+MESSAGES: 
+	- name must be unique
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeUniqueConstraintError",
+    "errors": [
+        {
+            "message": "name must be unique",
+            "type": "unique violation",
+            "path": "name",
+            "value": "aaa",
+            "origin": "DB",
+            "instance": {
+                "UUID": "063a3f85-e1d6-4e4a-b9d9-9318c3c08e04",
+                "name": "aaa",
+                "description": "aaa",
+                "updatedAt": "2024-08-10T10:01:36.530Z",
+                "createdAt": "2024-08-10T10:01:36.530Z"
+            },
+            "validatorKey": "not_unique",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ],
+    "parent": {
+        "code": "ER_DUP_ENTRY",
+        "errno": 1062,
+        "sqlState": "23000",
+        "sqlMessage": "Duplicate entry 'aaa' for key 'HardSkills.name'",
+        "sql": "INSERT INTO `HardSkills` (`UUID`,`name`,`description`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?);",
+        "parameters": [
+            "063a3f85-e1d6-4e4a-b9d9-9318c3c08e04",
+            "aaa",
+            "aaa",
+            "2024-08-10 10:01:36",
+            "2024-08-10 10:01:36"
+        ]
+    },
+    "original": {
+        "code": "ER_DUP_ENTRY",
+        "errno": 1062,
+        "sqlState": "23000",
+        "sqlMessage": "Duplicate entry 'aaa' for key 'HardSkills.name'",
+        "sql": "INSERT INTO `HardSkills` (`UUID`,`name`,`description`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?);",
+        "parameters": [
+            "063a3f85-e1d6-4e4a-b9d9-9318c3c08e04",
+            "aaa",
+            "aaa",
+            "2024-08-10 10:01:36",
+            "2024-08-10 10:01:36"
+        ]
+    },
+    "fields": {
+        "name": "aaa"
+    },
+    "sql": "INSERT INTO `HardSkills` (`UUID`,`name`,`description`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?);"
+}
+

@@ -1,0 +1,503 @@
+[2024-08-20T19:33:41.831Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /
+BASE URL: /testing-session/schedule
+MESSAGES: 
+	- HardSkillTestResults.testUUID cannot be null
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeValidationError",
+    "errors": [
+        {
+            "message": "HardSkillTestResults.testUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "testUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "ed4949f7-e7ef-4605-893f-2c26cb281b92",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:33:41.830Z",
+                "createdAt": "2024-08-20T19:33:41.830Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        },
+        {
+            "message": "HardSkillTestResults.userUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "userUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "ed4949f7-e7ef-4605-893f-2c26cb281b92",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:33:41.830Z",
+                "createdAt": "2024-08-20T19:33:41.830Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ]
+}
+
+[2024-08-20T19:35:18.243Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /
+BASE URL: /testing-session/schedule
+MESSAGES: 
+	- HardSkillTestResults.testUUID cannot be null
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeValidationError",
+    "errors": [
+        {
+            "message": "HardSkillTestResults.testUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "testUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "2cf5af5a-79b9-4c4b-aa17-cf9ae97d2458",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:35:18.242Z",
+                "createdAt": "2024-08-20T19:35:18.242Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        },
+        {
+            "message": "HardSkillTestResults.userUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "userUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "2cf5af5a-79b9-4c4b-aa17-cf9ae97d2458",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:35:18.242Z",
+                "createdAt": "2024-08-20T19:35:18.242Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ]
+}
+
+[2024-08-20T19:36:14.611Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- HardSkillTestResults.testUUID cannot be null
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeValidationError",
+    "errors": [
+        {
+            "message": "HardSkillTestResults.testUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "testUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "b79a74d9-e736-4488-8dfa-2aae38b0e9ff",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:36:14.609Z",
+                "createdAt": "2024-08-20T19:36:14.609Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        },
+        {
+            "message": "HardSkillTestResults.userUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "userUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "b79a74d9-e736-4488-8dfa-2aae38b0e9ff",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:36:14.609Z",
+                "createdAt": "2024-08-20T19:36:14.609Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ]
+}
+
+[2024-08-20T19:36:44.835Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- HardSkillTestResults.testUUID cannot be null
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeValidationError",
+    "errors": [
+        {
+            "message": "HardSkillTestResults.testUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "testUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "002d8658-c8ea-4e3b-920e-8ce29566b458",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:36:44.833Z",
+                "createdAt": "2024-08-20T19:36:44.833Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        },
+        {
+            "message": "HardSkillTestResults.userUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "userUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "002d8658-c8ea-4e3b-920e-8ce29566b458",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:36:44.833Z",
+                "createdAt": "2024-08-20T19:36:44.833Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ]
+}
+
+[2024-08-20T19:36:55.207Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- HardSkillTestResults.userUUID cannot be null
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeValidationError",
+    "errors": [
+        {
+            "message": "HardSkillTestResults.userUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "userUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "b4c8fe26-5d5e-4bb3-9652-90825c6479f0",
+                "isHumanVerified": false,
+                "testUUID": "ada",
+                "updatedAt": "2024-08-20T19:36:55.207Z",
+                "createdAt": "2024-08-20T19:36:55.207Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ]
+}
+
+[2024-08-20T19:38:01.737Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_1` FOREIGN KEY (`testUUID`) REFERENCES `HardSkillTests` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeForeignKeyConstraintError",
+    "parent": {
+        "code": "ER_NO_REFERENCED_ROW_2",
+        "errno": 1452,
+        "sqlState": "23000",
+        "sqlMessage": "Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_1` FOREIGN KEY (`testUUID`) REFERENCES `HardSkillTests` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)",
+        "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+        "parameters": [
+            "787025c2-d0ae-415c-a688-30b236fff21f",
+            false,
+            "ada",
+            "asa",
+            "2024-08-20 19:38:01",
+            "2024-08-20 19:38:01"
+        ]
+    },
+    "original": {
+        "code": "ER_NO_REFERENCED_ROW_2",
+        "errno": 1452,
+        "sqlState": "23000",
+        "sqlMessage": "Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_1` FOREIGN KEY (`testUUID`) REFERENCES `HardSkillTests` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)",
+        "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+        "parameters": [
+            "787025c2-d0ae-415c-a688-30b236fff21f",
+            false,
+            "ada",
+            "asa",
+            "2024-08-20 19:38:01",
+            "2024-08-20 19:38:01"
+        ]
+    },
+    "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+    "parameters": [
+        "787025c2-d0ae-415c-a688-30b236fff21f",
+        false,
+        "ada",
+        "asa",
+        "2024-08-20 19:38:01",
+        "2024-08-20 19:38:01"
+    ],
+    "table": "HardSkillTests",
+    "fields": [
+        "testUUID"
+    ],
+    "value": "ada",
+    "index": "HardSkillTestResults_ibfk_1",
+    "reltype": "child"
+}
+
+[2024-08-20T19:42:10.834Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- notNull Violation: HardSkillTestResults.testUUID cannot be null,
+notNull Violation: HardSkillTestResults.userUUID cannot be null
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeValidationError",
+    "errors": [
+        {
+            "message": "HardSkillTestResults.testUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "testUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "da215fd1-fd0d-422c-be37-85f52350fa09",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:42:10.832Z",
+                "createdAt": "2024-08-20T19:42:10.832Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        },
+        {
+            "message": "HardSkillTestResults.userUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "userUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "da215fd1-fd0d-422c-be37-85f52350fa09",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:42:10.832Z",
+                "createdAt": "2024-08-20T19:42:10.832Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ]
+}
+
+[2024-08-20T19:46:11.953Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_1` FOREIGN KEY (`testUUID`) REFERENCES `HardSkillTests` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeForeignKeyConstraintError",
+    "parent": {
+        "code": "ER_NO_REFERENCED_ROW_2",
+        "errno": 1452,
+        "sqlState": "23000",
+        "sqlMessage": "Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_1` FOREIGN KEY (`testUUID`) REFERENCES `HardSkillTests` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)",
+        "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+        "parameters": [
+            "150ab17c-cd32-4a0c-b9a9-c68383856334",
+            false,
+            "ada",
+            "asa",
+            "2024-08-20 19:46:11",
+            "2024-08-20 19:46:11"
+        ]
+    },
+    "original": {
+        "code": "ER_NO_REFERENCED_ROW_2",
+        "errno": 1452,
+        "sqlState": "23000",
+        "sqlMessage": "Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_1` FOREIGN KEY (`testUUID`) REFERENCES `HardSkillTests` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)",
+        "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+        "parameters": [
+            "150ab17c-cd32-4a0c-b9a9-c68383856334",
+            false,
+            "ada",
+            "asa",
+            "2024-08-20 19:46:11",
+            "2024-08-20 19:46:11"
+        ]
+    },
+    "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+    "parameters": [
+        "150ab17c-cd32-4a0c-b9a9-c68383856334",
+        false,
+        "ada",
+        "asa",
+        "2024-08-20 19:46:11",
+        "2024-08-20 19:46:11"
+    ],
+    "table": "HardSkillTests",
+    "fields": [
+        "testUUID"
+    ],
+    "value": "ada",
+    "index": "HardSkillTestResults_ibfk_1",
+    "reltype": "child"
+}
+
+[2024-08-20T19:46:53.376Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_2` FOREIGN KEY (`userUUID`) REFERENCES `Users` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeForeignKeyConstraintError",
+    "parent": {
+        "code": "ER_NO_REFERENCED_ROW_2",
+        "errno": 1452,
+        "sqlState": "23000",
+        "sqlMessage": "Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_2` FOREIGN KEY (`userUUID`) REFERENCES `Users` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)",
+        "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+        "parameters": [
+            "0690659f-b275-40ee-9efb-42428c61bc4c",
+            false,
+            "ef99b401-ba52-4c1a-9127-703949c1575d",
+            "asa",
+            "2024-08-20 19:46:53",
+            "2024-08-20 19:46:53"
+        ]
+    },
+    "original": {
+        "code": "ER_NO_REFERENCED_ROW_2",
+        "errno": 1452,
+        "sqlState": "23000",
+        "sqlMessage": "Cannot add or update a child row: a foreign key constraint fails (`m6248_it_rost`.`HardSkillTestResults`, CONSTRAINT `HardSkillTestResults_ibfk_2` FOREIGN KEY (`userUUID`) REFERENCES `Users` (`UUID`) ON DELETE CASCADE ON UPDATE CASCADE)",
+        "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+        "parameters": [
+            "0690659f-b275-40ee-9efb-42428c61bc4c",
+            false,
+            "ef99b401-ba52-4c1a-9127-703949c1575d",
+            "asa",
+            "2024-08-20 19:46:53",
+            "2024-08-20 19:46:53"
+        ]
+    },
+    "sql": "INSERT INTO `HardSkillTestResults` (`UUID`,`isHumanVerified`,`testUUID`,`userUUID`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);",
+    "parameters": [
+        "0690659f-b275-40ee-9efb-42428c61bc4c",
+        false,
+        "ef99b401-ba52-4c1a-9127-703949c1575d",
+        "asa",
+        "2024-08-20 19:46:53",
+        "2024-08-20 19:46:53"
+    ],
+    "table": "Users",
+    "fields": [
+        "userUUID"
+    ],
+    "value": "asa",
+    "index": "HardSkillTestResults_ibfk_2",
+    "reltype": "child"
+}
+
+[2024-08-20T19:48:04.859Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: POST
+URL: /schedule
+BASE URL: /testing-session
+MESSAGES: 
+	- notNull Violation: HardSkillTestResults.testUUID cannot be null,
+notNull Violation: HardSkillTestResults.userUUID cannot be null
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeValidationError",
+    "errors": [
+        {
+            "message": "HardSkillTestResults.testUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "testUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "86aeb504-c05a-42fb-bfd3-1992397a5136",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:48:04.858Z",
+                "createdAt": "2024-08-20T19:48:04.858Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        },
+        {
+            "message": "HardSkillTestResults.userUUID cannot be null",
+            "type": "notNull Violation",
+            "path": "userUUID",
+            "value": null,
+            "origin": "CORE",
+            "instance": {
+                "UUID": "86aeb504-c05a-42fb-bfd3-1992397a5136",
+                "isHumanVerified": false,
+                "updatedAt": "2024-08-20T19:48:04.858Z",
+                "createdAt": "2024-08-20T19:48:04.858Z"
+            },
+            "validatorKey": "is_null",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ]
+}
+
+[2024-08-22T13:11:45.286Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: GET
+URL: /
+BASE URL: /testing-session
+MESSAGES: 
+	- WHERE parameter "testUUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-22T13:13:22.604Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testingSession/httpHandlers/index.js:
+METHOD: GET
+URL: /?uuid=ef99b401-ba52-4c1a-9127-703949c1575d
+BASE URL: /testing-session
+MESSAGES: 
+	- cookieParser("secret") required for signed cookies
+OTHER ERROR INFO: 
+{}
+

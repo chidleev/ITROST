@@ -1,0 +1,182 @@
+[2024-08-20T16:55:05.594Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt must be provided
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt must be provided"
+}
+
+[2024-08-20T17:01:03.100Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt must be provided
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt must be provided"
+}
+
+[2024-08-20T17:02:00.708Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt must be provided
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt must be provided"
+}
+
+[2024-08-20T18:17:04.916Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:17:07.560Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:17:23.055Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:17:24.748Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:18:55.529Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:19:00.404Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:19:02.596Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:19:12.450Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:19:34.884Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:22:30.221Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+
+[2024-08-20T18:22:39.031Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/validators.js:
+METHOD: GET
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- jwt malformed
+OTHER ERROR INFO: 
+{
+    "name": "JsonWebTokenError",
+    "message": "jwt malformed"
+}
+

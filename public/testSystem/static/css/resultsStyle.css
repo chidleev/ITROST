@@ -1,0 +1,472 @@
+body {
+    width: 100%;
+    justify-content: start;
+}
+
+#footer {
+    margin-top: auto;
+}
+
+nav {
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    
+    align-items: stretch;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav.main {
+    justify-content: flex-end;
+    background-color: var(--dark-blue);
+    border-radius: 0 0 10px 10px;
+}
+
+nav .button {
+    padding: 5px;
+    width: 200px;
+    min-height: 30px;
+    font-size: small;
+    color: var(--dark-blue);
+    background-color: white;
+}
+
+nav.main .button:hover {
+    background-color: var(--light-blue);
+}
+
+nav.main .button:active, nav.main .button.active {
+    color: var(--blue);
+}
+
+#home, #logout {
+    width: 45px;
+    flex-shrink: 0;
+    background-color: var(--light-blue);
+}
+
+#home {
+    margin-right: auto;
+}
+
+nav.admin {
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+}
+
+nav.admin .button {
+    flex: 1 0;
+    color: white;
+    background-color: var(--dark-blue);
+}
+
+nav.admin .button:hover {
+    background-color: var(--light-blue);
+}
+
+nav.admin .button:active, nav.admin .button.active {
+    background-color: var(--light-blue);
+    color: white;
+}
+
+nav.category {
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+}
+
+nav.category .button {
+    flex: 0 1 100px;
+}
+
+nav.category .button:hover {
+    color: white;
+    background-color: var(--dark-blue);
+}
+
+nav.category .button:active, nav.category .button.active {
+    background-color: var(--blue);
+    color: white;
+}
+
+nav.category div:has(.multi-select) {
+    width: 200px;
+}
+
+nav.category div:has(.fio-search) {
+    width: 300px;
+}
+
+#main {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.result {
+    min-width: 500px;
+    flex: 0 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+}
+
+.result[hidden] {
+    display: none;
+}
+
+.result .info {
+    align-items: center;
+}
+
+.result .info img {
+    background-color: var(--dark-grey);
+    border-radius: 5px;
+}
+
+.result .info .scheduled {
+    margin-left: auto;
+    font-size: small;
+    color: var(--dark-grey);
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-blue);
+    -webkit-user-drag: none;
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+.result .job {
+    color: var(--dark-grey);
+    font-size: small;
+}
+
+.result .content {
+    padding: 5px 10px;
+    flex: 1;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.result .content .result-level span:last-child {
+    color: var(--green)
+}
+
+.result .content .result-level span:last-child.unanswered {
+    color: var(--grey)
+}
+
+
+#questions {
+    padding: 5px;
+    align-items: start;
+    flex: 0 0 70px;
+    position: sticky;
+    top: 0px;
+    border-radius: 0;
+    background-color: var(--light-grey);
+    z-index: 1;
+}
+
+#content {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
+}
+
+#content>div:last-child {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
+}
+
+#sidebar {
+    padding-left: 5px;
+    flex: 1 1 200px;
+}
+
+#answer-info {
+    height: auto;
+    position: sticky;
+    top: 75px;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+}
+
+#info-header {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+#info-header>div:has(.multi-select) {
+    width: 100%;
+}
+
+#info-alltest {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: smaller;
+}
+
+#info-alltest[hidden] {
+    display: none;
+}
+
+#info-alltest #statistic {
+    width: 100%;
+}
+
+#info-alltest>.button {
+    flex: 1;
+    padding: 5px;
+    font-size: smaller;
+    border-radius: 5px;
+}
+
+#info-alltest>.button.prohibition {
+    height: auto;
+}
+
+#info-content {
+    padding: 0px 5px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 5px;
+    font-size: smaller;
+}
+
+#info-content[hidden] {
+    display: none;
+}
+
+#info-content>img {
+    max-width: max(50%, min(100%, 300px));
+    align-self: center;
+    border-radius: 10px;
+}
+
+#info-content>.button {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#info-userAnswer, #info-correctAnswers {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5px;
+}
+
+#info-userAnswer:has(div), #info-correctAnswers:has(div) {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#info-userAnswer span:not(:first-child), #info-correctAnswers span:not(:first-child) {
+    padding: 0px 3px;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-grey);
+    background-color: white;
+    border-radius: 5px;
+}
+
+#info-userAnswer div, #info-correctAnswers div {
+    padding: 3px 5px;
+    color: var(--dark-grey);
+    background-color: white;
+    border-radius: 10px;
+}
+
+#history {
+    padding-right: 5px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.answer {
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--grey);
+    box-shadow: 0px 0px 40px -10px var(--dark-grey) inset;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.answer[hidden] {
+    display: none;
+}
+
+.answer.answered {
+    background-color: var(--grey);
+}
+
+.answer.answered.success {
+    box-shadow: 0px 0px 40px -20px var(--green) inset;
+}
+
+.answer.answered.failed {
+    box-shadow: 0px 0px 40px -20px var(--red) inset;
+}
+
+.answer.active {
+    background-color: white;
+}
+
+.answer>img {
+    max-width: 30%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.answer .statistic {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    
+    font-size: small;
+}
+
+.answer.unanswered .statistic * {
+    font-size: smaller;
+    color: var(--dark-grey);
+}
+
+.answer .statistic .time span {
+    color: var(--green);
+    text-wrap: nowrap;
+}
+
+#end-successful {
+    color: var(--green);
+}
+
+#answer-controls {
+    margin-bottom: 5px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
+}
+
+#answer-controls .button {
+    height: 100%;
+}
+
+#info-score {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#info-score div:first-child {
+    width: max-content;
+}
+
+#info-score .button {
+    padding: 5px 10px;
+    width: min-content;
+}
+
+@media (orientation: portrait) {
+    nav .button {
+        height: 45px;
+        font-size: small;
+        flex: 1 0 100px;
+        padding: 10px 10px;
+    }
+
+    nav.category div:has(.multi-select) {
+        width: 100%;
+    }
+
+    nav.category .button {
+        height: 30px;
+        flex: 1 1 100px;
+    }
+    .result {
+        min-width: 95%;
+    }
+
+    .result .info .scheduled {
+        margin-left: 0;
+    }
+
+    .result .info a {
+        margin-left: auto;
+    }
+
+    #content>div:last-child {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    #sidebar {
+        flex: 0;
+        position: sticky;
+        top: 75px;
+        padding-left: 0;
+    }
+
+    .answer-info {
+        position: relative;
+        top: 0;
+        height: 100%;
+    }
+
+    #history {
+        padding: 5px;
+    }
+}

@@ -1,0 +1,988 @@
+[2024-08-14T05:50:47.401Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /create
+BASE URL: /api/users
+MESSAGES: 
+	- login must be unique
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeUniqueConstraintError",
+    "errors": [
+        {
+            "message": "login must be unique",
+            "type": "unique violation",
+            "path": "login",
+            "value": "test_user",
+            "origin": "DB",
+            "instance": {
+                "UUID": "215ea81c-3cf2-4f26-9978-2d5ecdb408ea",
+                "login": "test_user",
+                "password": "$2b$10$wczkEFsh8lyiIYs3UW6nfOiBwQFnq4Y5qyBa1DH11WSMJ.h0v5Raq",
+                "updatedAt": "2024-08-14T05:50:47.389Z",
+                "createdAt": "2024-08-14T05:50:47.389Z"
+            },
+            "validatorKey": "not_unique",
+            "validatorName": null,
+            "validatorArgs": []
+        }
+    ],
+    "parent": {
+        "code": "ER_DUP_ENTRY",
+        "errno": 1062,
+        "sqlState": "23000",
+        "sqlMessage": "Duplicate entry 'test_user' for key 'Users.login'",
+        "sql": "INSERT INTO `Users` (`UUID`,`login`,`password`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?);",
+        "parameters": [
+            "215ea81c-3cf2-4f26-9978-2d5ecdb408ea",
+            "test_user",
+            "$2b$10$wczkEFsh8lyiIYs3UW6nfOiBwQFnq4Y5qyBa1DH11WSMJ.h0v5Raq",
+            "2024-08-14 05:50:47",
+            "2024-08-14 05:50:47"
+        ]
+    },
+    "original": {
+        "code": "ER_DUP_ENTRY",
+        "errno": 1062,
+        "sqlState": "23000",
+        "sqlMessage": "Duplicate entry 'test_user' for key 'Users.login'",
+        "sql": "INSERT INTO `Users` (`UUID`,`login`,`password`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?);",
+        "parameters": [
+            "215ea81c-3cf2-4f26-9978-2d5ecdb408ea",
+            "test_user",
+            "$2b$10$wczkEFsh8lyiIYs3UW6nfOiBwQFnq4Y5qyBa1DH11WSMJ.h0v5Raq",
+            "2024-08-14 05:50:47",
+            "2024-08-14 05:50:47"
+        ]
+    },
+    "fields": {
+        "login": "test_user"
+    },
+    "sql": "INSERT INTO `Users` (`UUID`,`login`,`password`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?);"
+}
+
+[2024-08-16T16:30:18.640Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:21.657Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:34.329Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:35.406Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:35.575Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:35.904Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:36.516Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:36.699Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:39.012Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:39.171Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:30:39.342Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:31:24.914Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:31:37.690Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:31:38.403Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:31:38.585Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:38:21.098Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:38:21.531Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:38:21.701Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:38:21.865Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:38:22.011Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:38:22.163Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:42:42.322Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:43:37.531Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:43:52.389Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:46:15.949Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:46:23.085Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-16T16:47:19.475Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: EMPTY
+OTHER ERROR INFO: 
+{}
+
+[2024-08-20T17:43:13.981Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- userRoles is not defined
+OTHER ERROR INFO: 
+{}
+
+[2024-08-20T17:52:58.966Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /login
+BASE URL: 
+MESSAGES: 
+	- userUUID is not defined
+OTHER ERROR INFO: 
+{}
+
+[2024-08-22T18:20:58.369Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /profile/7ea2f7ca-b643-403a-a01e-b30e8b9916ec
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of null (reading 'UUID')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-22T18:21:23.048Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /profile/admin_mumladze
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'image')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-22T18:21:58.704Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /profile/admin
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of null (reading 'UUID')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-22T18:22:08.322Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /profile/admin_mumladze
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'image')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-22T18:24:12.941Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /profile/admin_mumladze
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'image')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-22T18:25:36.219Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /profile/admin_mumladze
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'image')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-23T12:13:33.514Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- targetUserInfo.getPromotionApplications is not a function
+OTHER ERROR INFO: 
+{}
+
+[2024-08-23T12:13:55.187Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- WHERE parameter "userUUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-23T12:14:56.725Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- targetUserInfo is not defined
+OTHER ERROR INFO: 
+{}
+
+[2024-08-23T20:13:32.301Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- HardSkillTestResults is associated to Users using an alias. You've included an alias (testingResults), but it does not match the alias(es) defined in your association (testsResults).
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-08-23T20:15:06.597Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- Unknown column 'testsResults.result' in 'field list'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'testsResults.result' in 'field list'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`result` AS `testsResults.result`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` WHERE `Users`.`login` = 'admin_chidleev';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'testsResults.result' in 'field list'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`result` AS `testsResults.result`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` WHERE `Users`.`login` = 'admin_chidleev';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`result` AS `testsResults.result`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` WHERE `Users`.`login` = 'admin_chidleev';",
+    "parameters": {}
+}
+
+[2024-08-23T20:31:49.469Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Invalid use of group function
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "original": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';",
+    "parameters": {}
+}
+
+[2024-08-23T20:53:22.323Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Invalid use of group function
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "original": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';",
+    "parameters": {}
+}
+
+[2024-08-23T20:53:47.388Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Invalid use of group function
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "original": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`) IS NULL) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';",
+    "parameters": {}
+}
+
+[2024-08-23T21:07:11.347Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Unknown column 'appointedTest->testedSkill.name' in 'group statement'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'appointedTest->testedSkill.name' in 'group statement'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user' GROUP BY `appointedTest->testedSkill`.`name`;"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'appointedTest->testedSkill.name' in 'group statement'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user' GROUP BY `appointedTest->testedSkill`.`name`;"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user' GROUP BY `appointedTest->testedSkill`.`name`;",
+    "parameters": {}
+}
+
+[2024-08-23T21:10:23.461Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Invalid use of group function
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`)) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "original": {
+        "code": "ER_INVALID_GROUP_FUNC_USE",
+        "errno": 1111,
+        "sqlState": "HY000",
+        "sqlMessage": "Invalid use of group function",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`)) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND (max(`resultLevel`.`priority`)) LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';",
+    "parameters": {}
+}
+
+[2024-08-23T21:15:04.646Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Unknown column 'testsResults.resultLevel' in 'on clause'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'testsResults.resultLevel' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND `testsResults`.`resultLevel` IS NOT NULL LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'testsResults.resultLevel' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND `testsResults`.`resultLevel` IS NOT NULL LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND `testsResults`.`resultLevel` IS NOT NULL LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';",
+    "parameters": {}
+}
+
+[2024-08-23T21:16:33.922Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Unknown column 'testsResults.resultLevel' in 'on clause'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'testsResults.resultLevel' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND `testsResults`.`resultLevel` IS NOT NULL LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'testsResults.resultLevel' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND `testsResults`.`resultLevel` IS NOT NULL LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` INNER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` AND `testsResults`.`resultLevel` IS NOT NULL LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` WHERE `Users`.`login` = 'test_user';",
+    "parameters": {}
+}
+
+[2024-08-23T21:17:45.355Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of null (reading 'UUID')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T11:01:20.401Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'filter')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T11:09:31.268Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- targetUserInfo.dataValues.testsResults.foreach is not a function
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T11:10:22.713Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'foreach')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T11:10:46.122Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/test_user
+BASE URL: /api/users
+MESSAGES: 
+	- targetUserInfo.dataValues.testsResults.foreach is not a function
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T11:21:05.563Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- Order must be type of array or instance of a valid sequelize method.
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T11:21:43.478Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- Unknown column 'PromotionApplications.createdAt`ASK' in 'order clause'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'PromotionApplications.createdAt`ASK' in 'order clause'",
+        "sql": "SELECT `PromotionApplications`.`UUID`, `PromotionApplications`.`description`, `PromotionApplications`.`status`, `PromotionApplications`.`createdAt`, `PromotionApplications`.`updatedAt`, `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6' ORDER BY `PromotionApplications`.`createdAt``ASK`;"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'PromotionApplications.createdAt`ASK' in 'order clause'",
+        "sql": "SELECT `PromotionApplications`.`UUID`, `PromotionApplications`.`description`, `PromotionApplications`.`status`, `PromotionApplications`.`createdAt`, `PromotionApplications`.`updatedAt`, `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6' ORDER BY `PromotionApplications`.`createdAt``ASK`;"
+    },
+    "sql": "SELECT `PromotionApplications`.`UUID`, `PromotionApplications`.`description`, `PromotionApplications`.`status`, `PromotionApplications`.`createdAt`, `PromotionApplications`.`updatedAt`, `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6' ORDER BY `PromotionApplications`.`createdAt``ASK`;",
+    "parameters": {}
+}
+
+[2024-08-24T12:32:22.251Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- targetUserInfo.getApplication is not a function
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T12:38:08.288Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- sequelize is not defined
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T12:38:37.197Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- Column 'createdAt' in field list is ambiguous
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_NON_UNIQ_ERROR",
+        "errno": 1052,
+        "sqlState": "23000",
+        "sqlMessage": "Column 'createdAt' in field list is ambiguous",
+        "sql": "SELECT `PromotionApplications`.`UUID`, `PromotionApplications`.`description`, `PromotionApplications`.`status`, `PromotionApplications`.`createdAt`, `PromotionApplications`.`updatedAt`, MAX(`createdAt`), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "original": {
+        "code": "ER_NON_UNIQ_ERROR",
+        "errno": 1052,
+        "sqlState": "23000",
+        "sqlMessage": "Column 'createdAt' in field list is ambiguous",
+        "sql": "SELECT `PromotionApplications`.`UUID`, `PromotionApplications`.`description`, `PromotionApplications`.`status`, `PromotionApplications`.`createdAt`, `PromotionApplications`.`updatedAt`, MAX(`createdAt`), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "sql": "SELECT `PromotionApplications`.`UUID`, `PromotionApplications`.`description`, `PromotionApplications`.`status`, `PromotionApplications`.`createdAt`, `PromotionApplications`.`updatedAt`, MAX(`createdAt`), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';",
+    "parameters": {}
+}
+
+[2024-08-24T12:39:56.901Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- attr.includes is not a function
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T12:45:13.706Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- Column 'createdAt' in field list is ambiguous
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_NON_UNIQ_ERROR",
+        "errno": 1052,
+        "sqlState": "23000",
+        "sqlMessage": "Column 'createdAt' in field list is ambiguous",
+        "sql": "SELECT `PromotionApplications`.`UUID`, MAX(`createdAt`), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "original": {
+        "code": "ER_NON_UNIQ_ERROR",
+        "errno": 1052,
+        "sqlState": "23000",
+        "sqlMessage": "Column 'createdAt' in field list is ambiguous",
+        "sql": "SELECT `PromotionApplications`.`UUID`, MAX(`createdAt`), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "sql": "SELECT `PromotionApplications`.`UUID`, MAX(`createdAt`), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';",
+    "parameters": {}
+}
+
+[2024-08-24T12:48:07.686Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/admin_chidleev
+BASE URL: /api/users
+MESSAGES: 
+	- Unknown column 'PromotionApplication.createdAt' in 'field list'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'PromotionApplication.createdAt' in 'field list'",
+        "sql": "SELECT `PromotionApplications`.`UUID`, MAX(PromotionApplication.createdAt), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'PromotionApplication.createdAt' in 'field list'",
+        "sql": "SELECT `PromotionApplications`.`UUID`, MAX(PromotionApplication.createdAt), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "sql": "SELECT `PromotionApplications`.`UUID`, MAX(PromotionApplication.createdAt), `desiredJobTitle`.`UUID` AS `desiredJobTitle.UUID`, `desiredJobTitle`.`name` AS `desiredJobTitle.name`, `desiredJobTitle`.`description` AS `desiredJobTitle.description` FROM `PromotionApplications` AS `PromotionApplications` LEFT OUTER JOIN `JobTitles` AS `desiredJobTitle` ON `PromotionApplications`.`jobTitleUUID` = `desiredJobTitle`.`UUID` WHERE `PromotionApplications`.`userUUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';",
+    "parameters": {}
+}
+
+[2024-08-24T13:40:42.611Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/temp_user
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of null (reading 'dataValues')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-24T13:41:20.372Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/temp_user
+BASE URL: /api/users
+MESSAGES: 
+	- Cannot read properties of null (reading 'dataValues')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-27T14:44:01.775Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/
+BASE URL: /api/users
+MESSAGES: 
+	- PromotionApplications is associated to Users using an alias. You've included an alias (aplications), but it does not match the alias(es) defined in your association (applications).
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-08-27T14:44:32.128Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/
+BASE URL: /api/users
+MESSAGES: 
+	- Tried to select attributes using Sequelize.cast or Sequelize.fn without specifying an alias for the result, during eager loading. This means the attribute will not be added to the returned instance
+OTHER ERROR INFO: 
+{}
+
+[2024-08-27T14:45:34.570Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info/
+BASE URL: /api/users
+MESSAGES: 
+	- Tried to select attributes using Sequelize.cast or Sequelize.fn without specifying an alias for the result, during eager loading. This means the attribute will not be added to the returned instance
+OTHER ERROR INFO: 
+{}
+
+[2024-08-27T14:45:36.745Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info
+BASE URL: /api/users
+MESSAGES: 
+	- Tried to select attributes using Sequelize.cast or Sequelize.fn without specifying an alias for the result, during eager loading. This means the attribute will not be added to the returned instance
+OTHER ERROR INFO: 
+{}
+
+[2024-08-27T14:48:11.639Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info
+BASE URL: /api/users
+MESSAGES: 
+	- Unknown column 'PromotionApplications.createdAt' in 'field list'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'PromotionApplications.createdAt' in 'field list'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`createdAt`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority`, `applications`.`UUID` AS `applications.UUID`, `applications`.`status` AS `applications.status`, MAX(PromotionApplications.createdAt) AS `applications.submittedAt` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` LEFT OUTER JOIN `PromotionApplications` AS `applications` ON `Users`.`UUID` = `applications`.`userUUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'PromotionApplications.createdAt' in 'field list'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`createdAt`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority`, `applications`.`UUID` AS `applications.UUID`, `applications`.`status` AS `applications.status`, MAX(PromotionApplications.createdAt) AS `applications.submittedAt` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` LEFT OUTER JOIN `PromotionApplications` AS `applications` ON `Users`.`UUID` = `applications`.`userUUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`createdAt`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority`, `applications`.`UUID` AS `applications.UUID`, `applications`.`status` AS `applications.status`, MAX(PromotionApplications.createdAt) AS `applications.submittedAt` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` LEFT OUTER JOIN `PromotionApplications` AS `applications` ON `Users`.`UUID` = `applications`.`userUUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';",
+    "parameters": {}
+}
+
+[2024-08-27T14:48:34.475Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: GET
+URL: /info
+BASE URL: /api/users
+MESSAGES: 
+	- Column 'createdAt' in field list is ambiguous
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_NON_UNIQ_ERROR",
+        "errno": 1052,
+        "sqlState": "23000",
+        "sqlMessage": "Column 'createdAt' in field list is ambiguous",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`createdAt`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority`, `applications`.`UUID` AS `applications.UUID`, `applications`.`status` AS `applications.status`, MAX(createdAt) AS `applications.submittedAt` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` LEFT OUTER JOIN `PromotionApplications` AS `applications` ON `Users`.`UUID` = `applications`.`userUUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "original": {
+        "code": "ER_NON_UNIQ_ERROR",
+        "errno": 1052,
+        "sqlState": "23000",
+        "sqlMessage": "Column 'createdAt' in field list is ambiguous",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`createdAt`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority`, `applications`.`UUID` AS `applications.UUID`, `applications`.`status` AS `applications.status`, MAX(createdAt) AS `applications.submittedAt` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` LEFT OUTER JOIN `PromotionApplications` AS `applications` ON `Users`.`UUID` = `applications`.`userUUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`createdAt`, `profileInformation`.`UUID` AS `profileInformation.UUID`, `profileInformation`.`surname` AS `profileInformation.surname`, `profileInformation`.`name` AS `profileInformation.name`, `profileInformation`.`patronymic` AS `profileInformation.patronymic`, `profileInformation`.`birthday` AS `profileInformation.birthday`, `profileInformation`.`mail` AS `profileInformation.mail`, `profileInformation`.`image` AS `profileInformation.image`, `profileInformation->jobInformation`.`UUID` AS `profileInformation.jobInformation.UUID`, `profileInformation->jobInformation`.`name` AS `profileInformation.jobInformation.name`, `profileInformation->jobInformation`.`description` AS `profileInformation.jobInformation.description`, `testsResults`.`UUID` AS `testsResults.UUID`, `testsResults`.`isHumanVerified` AS `testsResults.isHumanVerified`, `testsResults->appointedTest`.`UUID` AS `testsResults.appointedTest.UUID`, `testsResults->appointedTest`.`createdAt` AS `testsResults.appointedTest.createdAt`, `testsResults->appointedTest`.`updatedAt` AS `testsResults.appointedTest.updatedAt`, `testsResults->appointedTest->testedSkill`.`UUID` AS `testsResults.appointedTest.testedSkill.UUID`, `testsResults->appointedTest->testedSkill`.`name` AS `testsResults.appointedTest.testedSkill.name`, `testsResults->appointedTest->testedSkill`.`description` AS `testsResults.appointedTest.testedSkill.description`, `testsResults->resultLevel`.`UUID` AS `testsResults.resultLevel.UUID`, `testsResults->resultLevel`.`name` AS `testsResults.resultLevel.name`, `testsResults->resultLevel`.`description` AS `testsResults.resultLevel.description`, `testsResults->resultLevel`.`priority` AS `testsResults.resultLevel.priority`, `applications`.`UUID` AS `applications.UUID`, `applications`.`status` AS `applications.status`, MAX(createdAt) AS `applications.submittedAt` FROM `Users` AS `Users` LEFT OUTER JOIN `UserProfiles` AS `profileInformation` ON `Users`.`UUID` = `profileInformation`.`userUUID` LEFT OUTER JOIN `JobTitles` AS `profileInformation->jobInformation` ON `profileInformation`.`jobTitleUUID` = `profileInformation->jobInformation`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `testsResults` ON `Users`.`UUID` = `testsResults`.`userUUID` LEFT OUTER JOIN `HardSkillTests` AS `testsResults->appointedTest` ON `testsResults`.`testUUID` = `testsResults->appointedTest`.`UUID` LEFT OUTER JOIN `HardSkills` AS `testsResults->appointedTest->testedSkill` ON `testsResults->appointedTest`.`skillUUID` = `testsResults->appointedTest->testedSkill`.`UUID` LEFT OUTER JOIN `Levels` AS `testsResults->resultLevel` ON `testsResults`.`resultLevelUUID` = `testsResults->resultLevel`.`UUID` LEFT OUTER JOIN `PromotionApplications` AS `applications` ON `Users`.`UUID` = `applications`.`userUUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';",
+    "parameters": {}
+}
+
+[2024-10-10T17:20:55.431Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/usersHandler.js:
+METHOD: POST
+URL: /updatePhoto
+BASE URL: /api/users
+MESSAGES: 
+	- Unexpected field
+OTHER ERROR INFO: 
+{
+    "name": "MulterError",
+    "message": "Unexpected field",
+    "code": "LIMIT_UNEXPECTED_FILE",
+    "field": "file",
+    "storageErrors": []
+}
+

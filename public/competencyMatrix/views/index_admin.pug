@@ -1,0 +1,62 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Настройка матрицы компетенций
+        link(rel="stylesheet", href="/testsystem/static/css/multiSelect.css")
+        link(rel="stylesheet", href="/testsystem/static/css/style.css")
+        link(rel="stylesheet", href="/testsystem/static/css/resultsStyle.css")
+        link(rel="stylesheet", href="/competency-matrix/static/css/style.css")
+        script(src="/script/axios/dist/axios.min.js") 
+    body 
+        #background
+        include header.pug
+        include header_admin.pug
+
+        - var skillsIndexes = {}, jobtitlesIndexes = {};
+        #main 
+            #sorts.item(style='--grid-row: 1; --grid-column: 1')
+                select#skill-search(name='skill-search')
+                select#jobtitle-search(name='level-search')
+            .item.background(style='--grid-column: 1 / '+(skills.length+3)+'; --grid-row: 1')
+
+            each skill, index in skills
+                - skillsIndexes[skill.UUID] = index + 2;
+                input.item.skill(type="text", id=skill.UUID, style='--grid-row: 1; --grid-column:'+skillsIndexes[skill.UUID], value=skill.name)
+                div(hidden, id='description-'+skill.UUID)= skill.description
+            input#new-skill.item.skill.new(type="text", style='--grid-row: 1; --grid-column:'+(skills.length+2), placeholder='Добавить навык')
+            
+            each jobTitle, index in jobTitles
+                - jobtitlesIndexes[jobTitle.UUID] = index + 2;
+                input.item.jobtitle(type="text", id=jobTitle.UUID, style='--grid-column: 1; --grid-row:'+jobtitlesIndexes[jobTitle.UUID], value=jobTitle.name)
+                div(hidden, id='description-'+jobTitle.UUID)= jobTitle.description
+                .item.background(style='--grid-column: 1 / '+(skills.length+2)+'; --grid-row:'+jobtitlesIndexes[jobTitle.UUID])
+            input#new-jobtitle.item.jobtitle.new(type="text", style='--grid-column: 1; --grid-row:'+(jobTitles.length+2), placeholder='Добавить должность')
+
+            each requirement in requirements
+                - var requiredLevel = requirement.requiredLevel?.UUID ?? 'null'
+                .item.requirement(id=requirement.UUID, skill-id=requirement.skillUUID, jobtitle-id=requirement.jobTitleUUID, level-id=requiredLevel, style='--grid-column:'+skillsIndexes[requirement.skillUUID]+';--grid-row:'+jobtitlesIndexes[requirement.jobTitleUUID])
+                    select(id='select-'+requirement.UUID)
+                    div(hidden, id='description-'+requirement.UUID)= requirement.description
+            
+            .level-info(id='null', hidden)= '<нет требований>'
+            each level in levels 
+                .level-info(id=level.UUID, hidden)= level.name
+                    
+        #info-panel 
+            #skill-panel.info-panel(hidden)
+                textarea#skill-textarea(placeholder="Введите описание навыка", wrap="soft") 
+                .button.prohibition(onClick='deleteSkill()') Удалить навык
+            #jobtitle-panel.info-panel(hidden)
+                textarea#jobtitle-textarea(placeholder="Введите описание должности", wrap="soft") 
+                .button.prohibition(onClick='deleteJobtitle()') Удалить должность
+            #requirement-panel.info-panel(hidden)
+                textarea#requirement-textarea(placeholder="Введите описание требования", wrap="soft")
+
+        #footer 
+            p “Айти Рост” - система грейдирования и построения матрицы компетенций
+            p Разработано командой “Бюро изумительных идей” в рамках дисциплины “Введение в инженерную деятельность” Таганрог 2024
+
+    script(src="/testsystem/static/js/multiSelect.js") 
+    script(src="/competency-matrix/static/js/index.js")

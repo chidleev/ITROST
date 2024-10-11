@@ -1,0 +1,215 @@
+[2024-08-29T12:30:11.147Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: GET
+URL: /5a4be242-65f8-11ef-b751-3cecef0f521e
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- WHERE parameter "UUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-29T12:31:42.188Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: GET
+URL: /5a4be242-65f8-11ef-b751-3cecef0f521e
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- WHERE parameter "UUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-29T12:32:52.008Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: GET
+URL: /5a4be242-65f8-11ef-b751-3cecef0f521e
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- WHERE parameter "UUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-29T12:58:22.956Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: GET
+URL: /5a4be242-65f8-11ef-b751-3cecef0f521e
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Invalid status code: undefined
+OTHER ERROR INFO: 
+{
+    "code": "ERR_HTTP_INVALID_STATUS_CODE"
+}
+
+[2024-09-12T09:43:37.840Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Unexpected field
+OTHER ERROR INFO: 
+{
+    "name": "MulterError",
+    "message": "Unexpected field",
+    "code": "LIMIT_UNEXPECTED_FILE",
+    "field": "image",
+    "storageErrors": []
+}
+
+[2024-09-12T09:56:10.635Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Unexpected field
+OTHER ERROR INFO: 
+{
+    "name": "MulterError",
+    "message": "Unexpected field",
+    "code": "LIMIT_UNEXPECTED_FILE",
+    "field": "image",
+    "storageErrors": []
+}
+
+[2024-09-12T09:57:38.093Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Unexpected field
+OTHER ERROR INFO: 
+{
+    "name": "MulterError",
+    "message": "Unexpected field",
+    "code": "LIMIT_UNEXPECTED_FILE",
+    "field": "image",
+    "storageErrors": []
+}
+
+[2024-09-12T09:59:20.819Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Unexpected field
+OTHER ERROR INFO: 
+{
+    "name": "MulterError",
+    "message": "Unexpected field",
+    "code": "LIMIT_UNEXPECTED_FILE",
+    "field": "image",
+    "storageErrors": []
+}
+
+[2024-09-12T10:04:03.974Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Unexpected field
+OTHER ERROR INFO: 
+{
+    "name": "MulterError",
+    "message": "Unexpected field",
+    "code": "LIMIT_UNEXPECTED_FILE",
+    "field": "image",
+    "storageErrors": []
+}
+
+[2024-09-19T16:17:55.830Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Не найден предыдущий фидбек по указанному UUID
+	- Cannot read properties of null (reading 'status')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-19T16:19:30.292Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Не найден предыдущий фидбек по указанному UUID
+	- Cannot read properties of null (reading 'status')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-19T16:25:32.978Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Не найден предыдущий фидбек по указанному UUID
+	- Cannot read properties of null (reading 'status')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-19T16:43:58.487Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Cannot read properties of null (reading 'status')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-26T11:54:35.826Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Cannot read properties of undefined (reading '0')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-26T11:56:36.558Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Cannot read properties of undefined (reading '0')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-26T12:00:04.249Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Cannot read properties of undefined (reading '0')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-26T12:04:46.787Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Cannot read properties of undefined (reading '0')
+OTHER ERROR INFO: 
+{}
+
+[2024-09-26T12:05:11.268Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/APIs/handlers/feedbacksHandler.js:
+METHOD: POST
+URL: /
+BASE URL: /api/feedbacks
+MESSAGES: 
+	- Cannot read properties of undefined (reading '0')
+OTHER ERROR INFO: 
+{}
+

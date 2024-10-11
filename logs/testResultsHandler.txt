@@ -1,0 +1,532 @@
+[2024-08-21T14:33:41.493Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=fsfs
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of null (reading 'HardSkillTestResults')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T14:35:36.940Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1e85e4f2-a371-4e59-8f4f-9b5596c28158
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'HardSkillTestResults')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T14:36:50.776Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1e85e4f2-a371-4e59-8f4f-9b5596c28158
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'HardSkillTestResults')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T14:37:29.820Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1e85e4f2-a371-4e59-8f4f-9b5596c28158
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'HardSkillTestResults')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T14:38:14.822Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1e85e4f2-a371-4e59-8f4f-9b5596c28158
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'HardSkillTestResults')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T14:47:24.102Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1a2ef336-c999-4579-b9ef-c2f7968f48bb
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'HardSkillTestResults')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T14:49:09.209Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1a2ef336-c999-4579-b9ef-c2f7968f48bb
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading 'HardSkillTestResults')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T14:51:54.899Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1a2ef336-c999-4579-b9ef-c2f7968f48bb
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Unknown column 'User.HardSkillTestResults' in 'field list'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'User.HardSkillTestResults' in 'field list'",
+        "sql": "SELECT `UserProfiles`.`UUID`, `UserProfiles`.`jobTitleUUID`, `UserProfiles`.`userUUID`, `UserProfiles`.`surname`, `UserProfiles`.`name`, `UserProfiles`.`patronymic`, `UserProfiles`.`birthday`, `UserProfiles`.`mail`, `UserProfiles`.`image`, `UserProfiles`.`createdAt`, `UserProfiles`.`updatedAt`, `User`.`UUID` AS `User.UUID`, `User`.`HardSkillTestResults` AS `User.HardSkillTestResults`, `User->HardSkillTestResults`.`UUID` AS `User.HardSkillTestResults.UUID`, `User->HardSkillTestResults`.`answerJSON` AS `User.HardSkillTestResults.answerJSON`, `User->HardSkillTestResults`.`totalScore` AS `User.HardSkillTestResults.totalScore`, `User->HardSkillTestResults`.`result` AS `User.HardSkillTestResults.result`, `User->HardSkillTestResults`.`isHumanVerified` AS `User.HardSkillTestResults.isHumanVerified`, `User->HardSkillTestResults`.`userReview` AS `User.HardSkillTestResults.userReview`, `User->HardSkillTestResults`.`testUUID` AS `User.HardSkillTestResults.testUUID`, `User->HardSkillTestResults`.`userUUID` AS `User.HardSkillTestResults.userUUID`, `User->HardSkillTestResults`.`createdAt` AS `User.HardSkillTestResults.createdAt`, `User->HardSkillTestResults`.`updatedAt` AS `User.HardSkillTestResults.updatedAt` FROM `UserProfiles` AS `UserProfiles` LEFT OUTER JOIN `Users` AS `User` ON `UserProfiles`.`userUUID` = `User`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `User->HardSkillTestResults` ON `User`.`UUID` = `User->HardSkillTestResults`.`userUUID` WHERE `UserProfiles`.`UUID` = '1a2ef336-c999-4579-b9ef-c2f7968f48bb';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'User.HardSkillTestResults' in 'field list'",
+        "sql": "SELECT `UserProfiles`.`UUID`, `UserProfiles`.`jobTitleUUID`, `UserProfiles`.`userUUID`, `UserProfiles`.`surname`, `UserProfiles`.`name`, `UserProfiles`.`patronymic`, `UserProfiles`.`birthday`, `UserProfiles`.`mail`, `UserProfiles`.`image`, `UserProfiles`.`createdAt`, `UserProfiles`.`updatedAt`, `User`.`UUID` AS `User.UUID`, `User`.`HardSkillTestResults` AS `User.HardSkillTestResults`, `User->HardSkillTestResults`.`UUID` AS `User.HardSkillTestResults.UUID`, `User->HardSkillTestResults`.`answerJSON` AS `User.HardSkillTestResults.answerJSON`, `User->HardSkillTestResults`.`totalScore` AS `User.HardSkillTestResults.totalScore`, `User->HardSkillTestResults`.`result` AS `User.HardSkillTestResults.result`, `User->HardSkillTestResults`.`isHumanVerified` AS `User.HardSkillTestResults.isHumanVerified`, `User->HardSkillTestResults`.`userReview` AS `User.HardSkillTestResults.userReview`, `User->HardSkillTestResults`.`testUUID` AS `User.HardSkillTestResults.testUUID`, `User->HardSkillTestResults`.`userUUID` AS `User.HardSkillTestResults.userUUID`, `User->HardSkillTestResults`.`createdAt` AS `User.HardSkillTestResults.createdAt`, `User->HardSkillTestResults`.`updatedAt` AS `User.HardSkillTestResults.updatedAt` FROM `UserProfiles` AS `UserProfiles` LEFT OUTER JOIN `Users` AS `User` ON `UserProfiles`.`userUUID` = `User`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `User->HardSkillTestResults` ON `User`.`UUID` = `User->HardSkillTestResults`.`userUUID` WHERE `UserProfiles`.`UUID` = '1a2ef336-c999-4579-b9ef-c2f7968f48bb';"
+    },
+    "sql": "SELECT `UserProfiles`.`UUID`, `UserProfiles`.`jobTitleUUID`, `UserProfiles`.`userUUID`, `UserProfiles`.`surname`, `UserProfiles`.`name`, `UserProfiles`.`patronymic`, `UserProfiles`.`birthday`, `UserProfiles`.`mail`, `UserProfiles`.`image`, `UserProfiles`.`createdAt`, `UserProfiles`.`updatedAt`, `User`.`UUID` AS `User.UUID`, `User`.`HardSkillTestResults` AS `User.HardSkillTestResults`, `User->HardSkillTestResults`.`UUID` AS `User.HardSkillTestResults.UUID`, `User->HardSkillTestResults`.`answerJSON` AS `User.HardSkillTestResults.answerJSON`, `User->HardSkillTestResults`.`totalScore` AS `User.HardSkillTestResults.totalScore`, `User->HardSkillTestResults`.`result` AS `User.HardSkillTestResults.result`, `User->HardSkillTestResults`.`isHumanVerified` AS `User.HardSkillTestResults.isHumanVerified`, `User->HardSkillTestResults`.`userReview` AS `User.HardSkillTestResults.userReview`, `User->HardSkillTestResults`.`testUUID` AS `User.HardSkillTestResults.testUUID`, `User->HardSkillTestResults`.`userUUID` AS `User.HardSkillTestResults.userUUID`, `User->HardSkillTestResults`.`createdAt` AS `User.HardSkillTestResults.createdAt`, `User->HardSkillTestResults`.`updatedAt` AS `User.HardSkillTestResults.updatedAt` FROM `UserProfiles` AS `UserProfiles` LEFT OUTER JOIN `Users` AS `User` ON `UserProfiles`.`userUUID` = `User`.`UUID` LEFT OUTER JOIN `HardSkillTestResults` AS `User->HardSkillTestResults` ON `User`.`UUID` = `User->HardSkillTestResults`.`userUUID` WHERE `UserProfiles`.`UUID` = '1a2ef336-c999-4579-b9ef-c2f7968f48bb';",
+    "parameters": {}
+}
+
+[2024-08-21T15:08:24.363Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?skillUuid=1e85e4f2-a371-4e59-8f4f-9b5596c28158
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Unknown column 'HardSkillTestResults.skillUUID' in 'on clause'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'HardSkillTestResults.skillUUID' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`password`, `Users`.`createdAt`, `Users`.`updatedAt`, `HardSkillTestResults`.`UUID` AS `HardSkillTestResults.UUID`, `HardSkillTestResults`.`answerJSON` AS `HardSkillTestResults.answerJSON`, `HardSkillTestResults`.`totalScore` AS `HardSkillTestResults.totalScore`, `HardSkillTestResults`.`result` AS `HardSkillTestResults.result`, `HardSkillTestResults`.`isHumanVerified` AS `HardSkillTestResults.isHumanVerified`, `HardSkillTestResults`.`userReview` AS `HardSkillTestResults.userReview`, `HardSkillTestResults`.`testUUID` AS `HardSkillTestResults.testUUID`, `HardSkillTestResults`.`userUUID` AS `HardSkillTestResults.userUUID`, `HardSkillTestResults`.`createdAt` AS `HardSkillTestResults.createdAt`, `HardSkillTestResults`.`updatedAt` AS `HardSkillTestResults.updatedAt` FROM `Users` AS `Users` INNER JOIN `HardSkillTestResults` AS `HardSkillTestResults` ON `Users`.`UUID` = `HardSkillTestResults`.`userUUID` AND `HardSkillTestResults`.`skillUUID` = '1e85e4f2-a371-4e59-8f4f-9b5596c28158' WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'HardSkillTestResults.skillUUID' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`password`, `Users`.`createdAt`, `Users`.`updatedAt`, `HardSkillTestResults`.`UUID` AS `HardSkillTestResults.UUID`, `HardSkillTestResults`.`answerJSON` AS `HardSkillTestResults.answerJSON`, `HardSkillTestResults`.`totalScore` AS `HardSkillTestResults.totalScore`, `HardSkillTestResults`.`result` AS `HardSkillTestResults.result`, `HardSkillTestResults`.`isHumanVerified` AS `HardSkillTestResults.isHumanVerified`, `HardSkillTestResults`.`userReview` AS `HardSkillTestResults.userReview`, `HardSkillTestResults`.`testUUID` AS `HardSkillTestResults.testUUID`, `HardSkillTestResults`.`userUUID` AS `HardSkillTestResults.userUUID`, `HardSkillTestResults`.`createdAt` AS `HardSkillTestResults.createdAt`, `HardSkillTestResults`.`updatedAt` AS `HardSkillTestResults.updatedAt` FROM `Users` AS `Users` INNER JOIN `HardSkillTestResults` AS `HardSkillTestResults` ON `Users`.`UUID` = `HardSkillTestResults`.`userUUID` AND `HardSkillTestResults`.`skillUUID` = '1e85e4f2-a371-4e59-8f4f-9b5596c28158' WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`password`, `Users`.`createdAt`, `Users`.`updatedAt`, `HardSkillTestResults`.`UUID` AS `HardSkillTestResults.UUID`, `HardSkillTestResults`.`answerJSON` AS `HardSkillTestResults.answerJSON`, `HardSkillTestResults`.`totalScore` AS `HardSkillTestResults.totalScore`, `HardSkillTestResults`.`result` AS `HardSkillTestResults.result`, `HardSkillTestResults`.`isHumanVerified` AS `HardSkillTestResults.isHumanVerified`, `HardSkillTestResults`.`userReview` AS `HardSkillTestResults.userReview`, `HardSkillTestResults`.`testUUID` AS `HardSkillTestResults.testUUID`, `HardSkillTestResults`.`userUUID` AS `HardSkillTestResults.userUUID`, `HardSkillTestResults`.`createdAt` AS `HardSkillTestResults.createdAt`, `HardSkillTestResults`.`updatedAt` AS `HardSkillTestResults.updatedAt` FROM `Users` AS `Users` INNER JOIN `HardSkillTestResults` AS `HardSkillTestResults` ON `Users`.`UUID` = `HardSkillTestResults`.`userUUID` AND `HardSkillTestResults`.`skillUUID` = '1e85e4f2-a371-4e59-8f4f-9b5596c28158' WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';",
+    "parameters": {}
+}
+
+[2024-08-21T15:11:51.618Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?skillUuid=1e85e4f2-a371-4e59-8f4f-9b5596c28158
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Unknown column 'HardSkillTestResults.HardSkillTest.skillUUID' in 'on clause'
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeDatabaseError",
+    "parent": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'HardSkillTestResults.HardSkillTest.skillUUID' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`password`, `Users`.`createdAt`, `Users`.`updatedAt`, `HardSkillTestResults`.`UUID` AS `HardSkillTestResults.UUID`, `HardSkillTestResults`.`answerJSON` AS `HardSkillTestResults.answerJSON`, `HardSkillTestResults`.`totalScore` AS `HardSkillTestResults.totalScore`, `HardSkillTestResults`.`result` AS `HardSkillTestResults.result`, `HardSkillTestResults`.`isHumanVerified` AS `HardSkillTestResults.isHumanVerified`, `HardSkillTestResults`.`userReview` AS `HardSkillTestResults.userReview`, `HardSkillTestResults`.`testUUID` AS `HardSkillTestResults.testUUID`, `HardSkillTestResults`.`userUUID` AS `HardSkillTestResults.userUUID`, `HardSkillTestResults`.`createdAt` AS `HardSkillTestResults.createdAt`, `HardSkillTestResults`.`updatedAt` AS `HardSkillTestResults.updatedAt`, `HardSkillTestResults->HardSkillTest`.`UUID` AS `HardSkillTestResults.HardSkillTest.UUID`, `HardSkillTestResults->HardSkillTest`.`name` AS `HardSkillTestResults.HardSkillTest.name`, `HardSkillTestResults->HardSkillTest`.`description` AS `HardSkillTestResults.HardSkillTest.description`, `HardSkillTestResults->HardSkillTest`.`infoJSON` AS `HardSkillTestResults.HardSkillTest.infoJSON`, `HardSkillTestResults->HardSkillTest`.`questionJSON` AS `HardSkillTestResults.HardSkillTest.questionJSON`, `HardSkillTestResults->HardSkillTest`.`skillUUID` AS `HardSkillTestResults.HardSkillTest.skillUUID`, `HardSkillTestResults->HardSkillTest`.`createdAt` AS `HardSkillTestResults.HardSkillTest.createdAt`, `HardSkillTestResults->HardSkillTest`.`updatedAt` AS `HardSkillTestResults.HardSkillTest.updatedAt` FROM `Users` AS `Users` INNER JOIN `HardSkillTestResults` AS `HardSkillTestResults` ON `Users`.`UUID` = `HardSkillTestResults`.`userUUID` AND `HardSkillTestResults`.`HardSkillTest.skillUUID` = '1e85e4f2-a371-4e59-8f4f-9b5596c28158' LEFT OUTER JOIN `HardSkillTests` AS `HardSkillTestResults->HardSkillTest` ON `HardSkillTestResults`.`testUUID` = `HardSkillTestResults->HardSkillTest`.`UUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "original": {
+        "code": "ER_BAD_FIELD_ERROR",
+        "errno": 1054,
+        "sqlState": "42S22",
+        "sqlMessage": "Unknown column 'HardSkillTestResults.HardSkillTest.skillUUID' in 'on clause'",
+        "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`password`, `Users`.`createdAt`, `Users`.`updatedAt`, `HardSkillTestResults`.`UUID` AS `HardSkillTestResults.UUID`, `HardSkillTestResults`.`answerJSON` AS `HardSkillTestResults.answerJSON`, `HardSkillTestResults`.`totalScore` AS `HardSkillTestResults.totalScore`, `HardSkillTestResults`.`result` AS `HardSkillTestResults.result`, `HardSkillTestResults`.`isHumanVerified` AS `HardSkillTestResults.isHumanVerified`, `HardSkillTestResults`.`userReview` AS `HardSkillTestResults.userReview`, `HardSkillTestResults`.`testUUID` AS `HardSkillTestResults.testUUID`, `HardSkillTestResults`.`userUUID` AS `HardSkillTestResults.userUUID`, `HardSkillTestResults`.`createdAt` AS `HardSkillTestResults.createdAt`, `HardSkillTestResults`.`updatedAt` AS `HardSkillTestResults.updatedAt`, `HardSkillTestResults->HardSkillTest`.`UUID` AS `HardSkillTestResults.HardSkillTest.UUID`, `HardSkillTestResults->HardSkillTest`.`name` AS `HardSkillTestResults.HardSkillTest.name`, `HardSkillTestResults->HardSkillTest`.`description` AS `HardSkillTestResults.HardSkillTest.description`, `HardSkillTestResults->HardSkillTest`.`infoJSON` AS `HardSkillTestResults.HardSkillTest.infoJSON`, `HardSkillTestResults->HardSkillTest`.`questionJSON` AS `HardSkillTestResults.HardSkillTest.questionJSON`, `HardSkillTestResults->HardSkillTest`.`skillUUID` AS `HardSkillTestResults.HardSkillTest.skillUUID`, `HardSkillTestResults->HardSkillTest`.`createdAt` AS `HardSkillTestResults.HardSkillTest.createdAt`, `HardSkillTestResults->HardSkillTest`.`updatedAt` AS `HardSkillTestResults.HardSkillTest.updatedAt` FROM `Users` AS `Users` INNER JOIN `HardSkillTestResults` AS `HardSkillTestResults` ON `Users`.`UUID` = `HardSkillTestResults`.`userUUID` AND `HardSkillTestResults`.`HardSkillTest.skillUUID` = '1e85e4f2-a371-4e59-8f4f-9b5596c28158' LEFT OUTER JOIN `HardSkillTests` AS `HardSkillTestResults->HardSkillTest` ON `HardSkillTestResults`.`testUUID` = `HardSkillTestResults->HardSkillTest`.`UUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';"
+    },
+    "sql": "SELECT `Users`.`UUID`, `Users`.`login`, `Users`.`password`, `Users`.`createdAt`, `Users`.`updatedAt`, `HardSkillTestResults`.`UUID` AS `HardSkillTestResults.UUID`, `HardSkillTestResults`.`answerJSON` AS `HardSkillTestResults.answerJSON`, `HardSkillTestResults`.`totalScore` AS `HardSkillTestResults.totalScore`, `HardSkillTestResults`.`result` AS `HardSkillTestResults.result`, `HardSkillTestResults`.`isHumanVerified` AS `HardSkillTestResults.isHumanVerified`, `HardSkillTestResults`.`userReview` AS `HardSkillTestResults.userReview`, `HardSkillTestResults`.`testUUID` AS `HardSkillTestResults.testUUID`, `HardSkillTestResults`.`userUUID` AS `HardSkillTestResults.userUUID`, `HardSkillTestResults`.`createdAt` AS `HardSkillTestResults.createdAt`, `HardSkillTestResults`.`updatedAt` AS `HardSkillTestResults.updatedAt`, `HardSkillTestResults->HardSkillTest`.`UUID` AS `HardSkillTestResults.HardSkillTest.UUID`, `HardSkillTestResults->HardSkillTest`.`name` AS `HardSkillTestResults.HardSkillTest.name`, `HardSkillTestResults->HardSkillTest`.`description` AS `HardSkillTestResults.HardSkillTest.description`, `HardSkillTestResults->HardSkillTest`.`infoJSON` AS `HardSkillTestResults.HardSkillTest.infoJSON`, `HardSkillTestResults->HardSkillTest`.`questionJSON` AS `HardSkillTestResults.HardSkillTest.questionJSON`, `HardSkillTestResults->HardSkillTest`.`skillUUID` AS `HardSkillTestResults.HardSkillTest.skillUUID`, `HardSkillTestResults->HardSkillTest`.`createdAt` AS `HardSkillTestResults.HardSkillTest.createdAt`, `HardSkillTestResults->HardSkillTest`.`updatedAt` AS `HardSkillTestResults.HardSkillTest.updatedAt` FROM `Users` AS `Users` INNER JOIN `HardSkillTestResults` AS `HardSkillTestResults` ON `Users`.`UUID` = `HardSkillTestResults`.`userUUID` AND `HardSkillTestResults`.`HardSkillTest.skillUUID` = '1e85e4f2-a371-4e59-8f4f-9b5596c28158' LEFT OUTER JOIN `HardSkillTests` AS `HardSkillTestResults->HardSkillTest` ON `HardSkillTestResults`.`testUUID` = `HardSkillTestResults->HardSkillTest`.`UUID` WHERE `Users`.`UUID` = '05bb69b9-46f8-4175-91e4-84983a4e19c6';",
+    "parameters": {}
+}
+
+[2024-08-21T15:22:31.299Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?skillUuid=ee36e733-774a-47ce-b54f-037ce631e531
+BASE URL: /testing-session/results
+MESSAGES: 
+	- result.includes is not a function
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T15:28:21.462Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?skillUuid=ee36e733-774a-47ce-b54f-037ce631e531
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading '0')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T15:30:04.338Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?skillUuid=ee36e733-774a-47ce-b54f-037ce631e531
+BASE URL: /testing-session/results
+MESSAGES: 
+	- Cannot read properties of undefined (reading '0')
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T18:20:52.702Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1a2ef336-c999-4579-b9ef-c2f7968f48bb
+BASE URL: /testing-session/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You've included an alias (testInfo), but it does not match the alias(es) defined in your association (HardSkillTest).
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-08-21T18:38:12.822Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1a2ef336-c999-4579-b9ef-c2f7968f48b1
+BASE URL: /testing-session/results
+MESSAGES: 
+	- WHERE parameter "userUUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T18:38:41.981Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1a2ef336-c999-4579-b9ef-c2f7968f48b1
+BASE URL: /testing-session/results
+MESSAGES: 
+	- WHERE parameter "userUUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-21T18:38:58.530Z]
+/usr/home/Dielve/domains/it-rost.sytes.net/public_nodejs/testingSession/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all?profileUuid=1a2ef336-c999-4579-b9ef-c2f7968f48b1
+BASE URL: /testing-session/results
+MESSAGES: 
+	- WHERE parameter "userUUID" has invalid "undefined" value
+OTHER ERROR INFO: 
+{}
+
+[2024-08-25T12:11:22.049Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all
+BASE URL: /testSystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-08-25T12:11:33.476Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /save
+BASE URL: /testSystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-08-25T12:11:38.425Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /save
+BASE URL: /testSystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-08-25T12:31:21.624Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /save
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-08-25T12:36:31.954Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /save
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T19:59:04.460Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T19:59:53.812Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:00:50.078Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:02:16.176Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:02:19.950Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:02:22.681Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:04:51.752Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:05:21.140Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:05:49.806Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:06:01.569Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:07:05.319Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:07:29.033Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html?verified=1
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:07:37.124Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html?verified=1
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:07:39.316Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html?verified=0
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:08:01.148Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html?verified=0
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:08:10.366Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html?verified=0
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:08:26.508Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /all-html?verified=0
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:43:51.736Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /2406d069-5fe8-11ef-b751-3cecef0f521e/
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-12T20:44:16.665Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: GET
+URL: /2406d069-5fe8-11ef-b751-3cecef0f521e/
+BASE URL: /testsystem/results
+MESSAGES: 
+	- HardSkillTests is associated to HardSkillTestResults using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+OTHER ERROR INFO: 
+{
+    "name": "SequelizeEagerLoadingError"
+}
+
+[2024-09-26T16:16:58.933Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: DELETE
+URL: /5a5bc80a-620a-11ef-b751-3cecef0f521e
+BASE URL: /testsystem/results
+MESSAGES: 
+	- Некорректный UUID
+OTHER ERROR INFO: EMPTY
+
+[2024-09-26T16:18:01.562Z]
+/usr/home/Dielve/domains/it-rost.mooo.com/public_nodejs/testSystemApi/httpHandlers/testResultsHandler.js:
+METHOD: DELETE
+URL: /5a5bc80a-620a-11ef-b751-3cecef0f521e
+BASE URL: /testsystem/results
+MESSAGES: 
+	- Некорректный UUID
+OTHER ERROR INFO: EMPTY
+

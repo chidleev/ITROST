@@ -1,0 +1,63 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Настройка матрицы компетенций
+        link(rel="stylesheet", href="/testsystem/static/css/multiSelect.css")
+        link(rel="stylesheet", href="/testsystem/static/css/style.css")
+        link(rel="stylesheet", href="/testsystem/static/css/resultsStyle.css")
+        link(rel="stylesheet", href="/competency-matrix/static/css/style.css")
+        script(src="/script/axios/dist/axios.min.js") 
+    body 
+        #background
+        include header.pug
+        include header_admin.pug
+
+        - var skillsIndexes = {}, jobtitlesIndexes = {};
+        #main 
+            #sorts.item(style='--grid-row: 1; --grid-column: 1')
+                select#skill-search(name='skill-search')
+                select#jobtitle-search(name='level-search')
+            .item.background(style='--grid-column: 1 / '+(skills.length+2)+'; --grid-row: 1')
+
+            each skill, index in skills
+                - skillsIndexes[skill.UUID] = index + 2;
+                - var decsription = skill.description ?? 'Описание отсутствует'
+                .item.skill(type="text", id=skill.UUID, style='--grid-row: 1; --grid-column:'+skillsIndexes[skill.UUID])= skill.name
+                div(hidden, id='description-'+skill.UUID)= decsription
+            
+            each jobTitle, index in jobTitles
+                - jobtitlesIndexes[jobTitle.UUID] = index + 2;
+                - var decsription = jobTitle.description ?? 'Описание отсутствует'
+                .item.jobtitle(type="text", id=jobTitle.UUID, style='--grid-column: 1; --grid-row:'+jobtitlesIndexes[jobTitle.UUID])= jobTitle.name
+                div(hidden, id='description-'+jobTitle.UUID)= decsription
+                .item.background(style='--grid-column: 1 / '+(skills.length+2)+'; --grid-row:'+jobtitlesIndexes[jobTitle.UUID])
+
+            each requirement in requirements
+                - var requiredLevel = requirement.requiredLevel?.name ?? '<нет требований>'
+                - var decsription = requirement.description ?? 'Описание отсутствует'
+                .item.requirement(
+                    id=requirement.UUID, 
+                    skill-id=requirement.skillUUID, 
+                    jobtitle-id=requirement.jobTitleUUID, 
+                    style='--grid-column:'+skillsIndexes[requirement.skillUUID]+';--grid-row:'+jobtitlesIndexes[requirement.jobTitleUUID],
+                    class=(requiredLevel === '<нет требований>')? 'no' : ''
+                )
+                    span= requiredLevel
+                    div(hidden, id='description-'+requirement.UUID)= decsription
+
+        #info-panel 
+            #skill-panel.info-panel(hidden)
+                #skill-textarea.textarea
+            #jobtitle-panel.info-panel(hidden)
+                #jobtitle-textarea.textarea
+            #requirement-panel.info-panel(hidden)
+                #requirement-textarea.textarea
+
+        #footer 
+            p “Айти Рост” - система грейдирования и построения матрицы компетенций
+            p Разработано командой “Бюро изумительных идей” в рамках дисциплины “Введение в инженерную деятельность” Таганрог 2024
+
+    script(src="/testsystem/static/js/multiSelect.js") 
+    script(src="/competency-matrix/static/js/index.js")
