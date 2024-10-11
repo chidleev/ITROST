@@ -1,0 +1,2190 @@
+openapi: "3.0.3"
+info:
+  title: IT Rost API
+  version: "1.0"
+
+servers:
+  - url: https://it-rost.mooo.com/api
+
+security:
+  - JWTCookie: []
+
+paths:
+  /login:
+    post:
+      summary: Запрос на аутентификацию
+      description: Принимает логин и пароль пользователя, при успешной авторизации возвращает JWT токен в cookies
+      operationId: login
+      security: []
+      requestBody:
+        required: true
+        description: JSON объект, содержащий логин и пароль
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                login:
+                  type: string
+                  example: test_user
+                password:
+                  type: string
+                  example: password
+      responses:
+        "200":
+          description: Удачная аутентификация
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 
+                  oneOf:
+                    - Success
+                    - Authorization unnessesary
+          headers:
+            Set-Cookie:
+              schema:
+                type: string
+                example: jwt=iyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...; Path=/; HttpOnly
+        "401":
+          description: Указаны неполные данные
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: Authorization nessesary
+        "500":
+          description: Ошибка в запросе к базе данных
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    maxLength: 100
+                    items:
+                      type: string
+                      example: WHERE parameter "UUID" has invalid "undefined" value
+  
+  /logout:
+    get:
+      summary: Запрос на выход из аккаунта
+      description: Запрос на выход из аккаунта, удаляющий токен JWT и перенаправляющий на страницу авторизации
+      operationId: logout
+      responses:
+        "302":
+          description: Выход из аккаунта успешен, JWT токен удален, перенаправление на форму входа
+          headers:
+            Clear-Cookie:
+              schema:
+                type: string
+                example: jwt=iyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...; Path=/; HttpOnly
+  
+  /users/info:
+    get:
+      summary: Получение информации о текущем пользователе
+      description: Возвращает информацию о текущем пользователе на основе JWT токена
+      operationId: getUserInfo
+      responses:
+        "200":
+          description: Информация о пользователе успешно получена
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserInfo"
+        "404":
+          description: Пользователь не найден
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "User not found"
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+  
+  /users/info/{login}:
+    get:
+      summary: Получение информации о пользователе по логину
+      description: Возвращает информацию о пользователе по его логину
+      operationId: getUserInfoByLogin
+      parameters:
+        - in: path
+          name: login
+          required: true
+          schema:
+            type: string
+            example: "test_user"
+      responses:
+        "200":
+          description: Информация о пользователе успешно получена
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserInfo"
+        "404":
+          description: Пользователь не найден
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "User not found"
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+  
+  /users/create:
+    post:
+      summary: Создание нового пользователя
+      description: Создает нового пользователя в системе
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                login:
+                  type: string
+                  example: "new_user"
+                password:
+                  type: string
+                  example: "password"
+                surname:
+                  type: string
+                  example: "Иванов"
+                name:
+                  type: string
+                  example: "Иван"
+                patronymic:
+                  type: string
+                  example: "Иванович"
+                birthday:
+                  type: string
+                  format: date
+                  example: "2000-01-01"
+                mail:
+                  type: string
+                  example: "ivanov@example.com"
+                jobTitleUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Пользователь успешно создан
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/UserProfile"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Не указан логин"
+  
+  /users/updatePhoto:
+    post:
+      summary: Обновление фото профиля пользователя
+      description: Обновляет фото профиля пользователя
+      operationId: updateUserPhoto
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                userUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Фото профиля успешно обновлено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                      example: "/path/to/photo.jpg"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Файл не был отправлен на сервер"
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+  
+  /users/changePassword:
+    patch:
+      summary: Изменение пароля пользователя
+      description: Изменяет пароль текущего пользователя
+      operationId: changeUserPassword
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                oldPassword:
+                  type: string
+                  example: "old_password"
+                newPassword:
+                  type: string
+                  example: "new_password"
+      responses:
+        "200":
+          description: Пароль успешно изменен
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "OK"
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Некорректный старый пароль"
+        "403":
+          description: Неверный пароль
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Неверный пароль"
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+  
+  /users/changeJobTitle:
+    patch:
+      summary: Изменение должности пользователя
+      description: Изменяет должность пользователя (только для администраторов)
+      operationId: changeUserJobTitle
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                jobTitleUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Должность успешно изменена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                      example: "OK"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "403":
+          description: Доступ запрещен
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Access denied"
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Некорректный UUID пользователя"
+
+  /hardskills:
+    get:
+      summary: Запрос списка всех навыков
+      description: Возвращает список всех навыков, зарегистрированных в системе
+      operationId: findAllHardSkills
+      responses:
+        "200":
+          description: Список всех навыков, зарегистрированных в системе
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/HardSkill"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+    post:
+      summary: Создание нового навыка
+      description: Создает новый навык в системе
+      operationId: createHardSkill
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Flutter"
+                description:
+                  type: string
+                  example: "Навыки владения языком Flutter"
+      responses:
+        "200":
+          description: Навык успешно создан
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/HardSkill"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Не указано название навыка."
+  
+  /hardskills/{skillUuid}:
+    delete:
+      summary: Удаление навыка
+      description: Удаляет навык по UUID
+      operationId: deleteHardSkill
+      parameters:
+        - in: path
+          name: skillUuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Навык успешно удален
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: integer
+                    example: 1
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+    get:
+      summary: Получение навыка по UUID
+      description: Возвращает информацию о навыке по его UUID
+      operationId: getHardSkillByUuid
+      parameters:
+        - in: path
+          name: skillUuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Навык успешно найден
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/HardSkill"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "404":
+          description: Навык не найден
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Навыка с указанным UUID не существует."
+
+    patch:
+      summary: Обновление информации о навыке
+      description: Обновляет информацию о навыке по его UUID
+      operationId: updateHardSkill
+      parameters:
+        - in: path
+          name: skillUuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                field:
+                  type: string
+                  example: "name"
+                newValue:
+                  type: string
+                  example: "Advanced Flutter"
+      responses:
+        "200":
+          description: Навык успешно обновлен
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    example: ""
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Не указано новое значение."
+  
+  /hardskilltests:
+    get:
+      summary: Запрос списка всех тестов по навыкам
+      description: Возвращает список всех тестов по навыкам, зарегистрированных в системе
+      operationId: findAllHardSkillTests
+      parameters:
+        - in: query
+          name: skillUuid
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+          required: false
+          description: UUID навыка для фильтрации тестов
+      responses:
+        "200":
+          description: Список всех тестов по навыкам, зарегистрированных в системе
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/HardSkillTest"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+
+    post:
+      summary: Создание нового теста по навыку
+      description: Создает новый тест по навыку в системе
+      operationId: createHardSkillTest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Тест по Flutter"
+                description:
+                  type: string
+                  example: "Тест на проверку навыков владения Flutter"
+                skillUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                infoJSON:
+                  type: object
+                  example: {}
+                questionsJSON:
+                  type: object
+                  example: {}
+      responses:
+        "200":
+          description: Тест успешно создан
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/HardSkillTest"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Отсутствует название теста, невозможно создать тест"
+  
+  /hardskilltests/{testUuid}:
+    delete:
+      summary: Удаление теста по навыку
+      description: Удаляет тест по навыку по UUID
+      operationId: deleteHardSkillTest
+      parameters:
+        - in: path
+          name: testUuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Тест успешно удален
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: integer
+                    example: 1
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+    get:
+      summary: Получение теста по навыку по UUID
+      description: Возвращает информацию о тесте по навыку по его UUID
+      operationId: getHardSkillTestByUuid
+      parameters:
+        - in: path
+          name: testUuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Тест успешно найден
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/HardSkillTest"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "404":
+          description: Тест не найден
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Теста с указанным UUID не существует."
+
+    patch:
+      summary: Обновление информации о тесте по навыку
+      description: Обновляет информацию о тесте по навыку по его UUID
+      operationId: updateHardSkillTest
+      parameters:
+        - in: path
+          name: testUuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Обновленный тест по Flutter"
+                description:
+                  type: string
+                  example: "Обновленный тест на проверку навыков владения Flutter"
+                skillUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                infoJSON:
+                  type: object
+                  example: {}
+                questionsJSON:
+                  type: object
+                  example: {}
+      responses:
+        "200":
+          description: Тест успешно обновлен
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/HardSkillTest"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Отсутствует название теста, невозможно создать тест"
+
+  /jobtitles:
+    get:
+      summary: Запрос списка всех должностей
+      description: Возвращает список всех должностей, зарегистрированных в системе
+      operationId: findAllJobTitles
+      responses:
+        "200":
+          description: Список всех должностей, зарегистрированных в системе
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/JobTitle"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+
+    post:
+      summary: Создание новой должности
+      description: Создает новую должность в системе
+      operationId: createJobTitle
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Главный тестировщик"
+                description:
+                  type: string
+                  example: "Описание должности"
+                vacantNum:
+                  type: integer
+                  example: 5
+      responses:
+        "200":
+          description: Должность успешно создана
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/JobTitle"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Не указано название должности."
+  
+  /jobtitles/{uuid}:
+    delete:
+      summary: Удаление должности
+      description: Удаляет должность по UUID
+      operationId: deleteJobTitle
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Должность успешно удалена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: integer
+                    example: 1
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+    get:
+      summary: Получение должности по UUID
+      description: Возвращает информацию о должности по её UUID
+      operationId: getJobTitleByUuid
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Должность успешно найдена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/JobTitle"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "404":
+          description: Должность не найдена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Должность с указанным UUID не существует."
+
+    patch:
+      summary: Обновление информации о должности
+      description: Обновляет информацию о должности по её UUID
+      operationId: updateJobTitle
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                field:
+                  type: string
+                  example: "description"
+                newValue:
+                  type: string
+                  example: "Обновленное описание должности"
+      responses:
+        "200":
+          description: Должность успешно обновлена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/JobTitle"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Не указано новое значение."
+
+  /jobhardskills:
+    get:
+      summary: Запрос списка всех требований к навыкам для должностей
+      description: Возвращает список всех требований к навыкам для должностей, зарегистрированных в системе
+      operationId: findAllJobHardSkills
+      parameters:
+        - in: query
+          name: skillUuid
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+          required: false
+          description: UUID навыка для фильтрации требований
+        - in: query
+          name: jobUuid
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+          required: false
+          description: UUID должности для фильтрации требований
+      responses:
+        "200":
+          description: Список всех требований к навыкам для должностей, зарегистрированных в системе
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/JobHardSkill"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+
+    post:
+      summary: Создание нового требования к навыку для должности
+      description: Создает новое требование к навыку для должности в системе
+      operationId: createJobHardSkill
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                skillUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                jobTitleUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                requirements:
+                  type: string
+                  example: "Знание Flutter на уровне Junior"
+      responses:
+        "200":
+          description: Требование успешно создано
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/JobHardSkill"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Не указан навык должности"
+  
+  /jobhardskills/{uuid}:
+    delete:
+      summary: Удаление требования к навыку для должности
+      description: Удаляет требование к навыку для должности по UUID
+      operationId: deleteJobHardSkill
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Требование успешно удалено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: integer
+                    example: 1
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+    get:
+      summary: Получение требования к навыку для должности по UUID
+      description: Возвращает информацию о требовании к навыку для должности по его UUID
+      operationId: getJobHardSkillByUuid
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Требование успешно найдено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/JobHardSkill"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "404":
+          description: Требование не найдено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Требования с указанным UUID не существует."
+
+    patch:
+      summary: Обновление информации о требовании к навыку для должности
+      description: Обновляет информацию о требовании к навыку для должности по его UUID
+      operationId: updateJobHardSkill
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                field:
+                  type: string
+                  example: "requirements"
+                newValue:
+                  type: string
+                  example: "Знание Flutter на уровне Senior"
+      responses:
+        "200":
+          description: Требование успешно обновлено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/JobHardSkill"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Не указано новое значение."
+
+  /feedbacks:
+    get:
+      summary: Запрос списка всех корневых обращений пользователя
+      description: Возвращает список всех корневых обращений пользователя
+      operationId: findAllRootFeedbacks
+      responses:
+        "200":
+          description: Список всех корневых обращений пользователя
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Feedback"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+    post:
+      summary: Создание нового обращения
+      description: Создает новое обращение в системе
+      operationId: createFeedback
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                prevUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                message:
+                  type: string
+                  example: "Сообщение обращения"
+                image:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Обращение успешно создано
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/Feedback"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Некорректное сообщение"
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+  
+  /feedbacks/{uuid}:
+    get:
+      summary: Запрос цепочки обращений по UUID корневого обращения
+      description: Возвращает цепочку обращений, начиная с указанного корневого обращения
+      operationId: findFeedbacksChainByRoot
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Цепочка обращений успешно получена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Feedback"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Некорректный корень цепочки обращений
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Некорректный корень цепочки обращений"
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+  /teams:
+    get:
+      summary: Запрос списка всех команд
+      description: Возвращает список всех команд, зарегистрированных в системе
+      operationId: findAllTeams
+      responses:
+        "200":
+          description: Список всех команд, зарегистрированных в системе
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Team"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+    post:
+      summary: Создание новой команды
+      description: Создает новую команду в системе
+      operationId: createTeam
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Новая команда"
+                leaderUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                description:
+                  type: string
+                  example: "Описание команды"
+      responses:
+        "200":
+          description: Команда успешно создана
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/Team"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Некорректно указан UUID тимлида"
+  
+  /teams/{uuid}:
+    delete:
+      summary: Удаление команды
+      description: Удаляет команду по UUID
+      operationId: deleteTeam
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Команда успешно удалена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: integer
+                    example: 1
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+    get:
+      summary: Получение команды по UUID
+      description: Возвращает информацию о команде по её UUID
+      operationId: getTeamByUuid
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Команда успешно найдена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/Team"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "404":
+          description: Команда не найдена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Команда с указанным UUID не существует."
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
+    patch:
+      summary: Обновление информации о команде
+      description: Обновляет информацию о команде по её UUID
+      operationId: updateTeam
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Обновленное название команды"
+                leaderUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                description:
+                  type: string
+                  example: "Обновленное описание команды"
+      responses:
+        "200":
+          description: Команда успешно обновлена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/Team"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Некорректно указан новый UUID тимлида"
+
+components:
+  schemas:
+    UserInfo:
+      oneOf:
+        - type: object
+          description: Личная информация
+          properties:
+            login:
+              type: string
+              description: Логин запрошенного пользователя
+              example: test_user
+            profileInformation:
+              type: object
+              description: Общедоступная информация о пользователе
+              properties:
+                UUID:
+                  type: string
+                  description: Уникальный универсальный идентификатор профиля пользователя (версия 4)
+                  example: 1e85e4f2-a371-4e59-8f4f-9b5596c28158
+                surname:
+                  type: string
+                  description: Фамилия пользователя
+                  example: Иванов
+                name:
+                  type: string
+                  description: Имя пользователя
+                  example: Иван
+                patronymic:
+                  type: string
+                  description: Отчество пользователя
+                  example: Иванович
+                birthday:
+                  type: string
+                  description: Дата рождения. Формат - ISO
+                  example: 2000-12-31T00:00:00.000Z
+                mail:
+                  type: string
+                  description: Рабочая почта
+                  example: it-rost.test-user@mail.ru
+                image:
+                  type: string
+                  description: Ссылка на фото профиля
+                  example: /static/img/profiles/79308323-9818-49dd-8925-b41e63216451.png
+                jobInformation:
+                  type: object
+                  description: Информация о занимаемой пользователем должности
+                  properties:
+                    name:
+                      type: string
+                      description: Название должности
+                      example: Главный тестировщик
+                    description:
+                      type: string
+                      description: Описание должности
+                      example: Главный тестировщик в компании. Лично на себе испытывает все доступные и внедряемые функции системы тестирования
+            testsResults:
+              type: array
+              description: Массив, содержащий в себе информацию об удачно написанных тестах, подтверждающих владение соответствующим навыком на указанном уровне
+              items:
+                type: object
+                description: Информация о результате теста
+                properties:
+                  isHumanVerified:
+                    type: boolean
+                    description: Поле, указывающее, был ли результат тестироавния проверен человеком
+                    example: false
+                  appointedTest:
+                    type: object
+                    description: Информация о назначенном тесте
+                    properties:
+                      UUID: 
+                        type: string
+                        description: Уникальный универсальный идентификатор теста (версия 4)
+                        example: ef99b401-ba52-4c1a-9127-703949c1575d
+                      createdAt: 
+                        type: string
+                        description: Дата и время назначения теста
+                        example: 2024-08-03T10:51:49.000Z
+                      updatedAt: 
+                        type: string
+                        description: Дата и время прохождения теста
+                        example: 2024-08-03T10:51:49.000Z
+                      testedSkill: 
+                        type: object
+                        description: Информация о тестируемом навыке
+                        properties:
+                          name:
+                            type: string
+                            description: Название навыка
+                            example: Flutter
+                          description:
+                            type: string
+                            description: Описание навыка
+                            example: Навыки владения языком Flutter
+                  resultLevel:
+                    oneOf:
+                      - type: object
+                        description: Информация о подтвержденном уровне владения навыком
+                        properties:
+                          name:
+                            type: string
+                            description: Название уровня
+                            example: Junior
+                          description:
+                            type: string
+                            description: Описание уровня
+                            example: Начинающий специалист с базовыми знаниями и навыками. Может выполнять простейшие задачи под руководством более опытных коллег.
+                          priority:
+                            type: integer
+                            description: Приоритет уровня навыка. В случае, когда пользователь повышал уровень владения навыком, из двух записей, насчет одного и того же навыка, отобразить ту, у которой приоритет уровня владения выше
+                            example: 1
+                      - type: string
+                        nullable: true
+                        description: Значение null, указывающее на неподтвержденный навык (тест не пройден). Отобразить во вкладке назначенных тестов
+                        example: null
+            appointedTestsCount:
+              type: integer
+              description: 'Количество назначенных тестов. Считается как количество результатов с полем resultLevel: null'
+              minimum: 0
+              example: 0
+            applications:
+              type: array
+              description: Массив, соддержащий один объект со статусом последней поданной заявки
+              maxLength: 1
+              minLength: 1
+              items:
+                type: object
+                description: Объект, соддержащий статус последней поданной заявки
+                properties:
+                  status:
+                    oneOf:
+                      - type: string
+                        example: на рассмотрении
+                      - type: string
+                        example: одобрена
+                      - type: string
+                        example: отклонена
+                      - type: string
+                        nullable: true
+                        example: null
+                        description: Означает, что пользователь еще не подал ни одной заявки
+        - type: object
+          description: Информация о другом пользователе
+          properties:
+            login:
+              type: string
+              description: Логин запрошенного пользователя
+              example: test_user
+            profileInformation:
+              type: object
+              description: Общедоступная информация о пользователе
+              properties:
+                UUID:
+                  type: string
+                  description: Уникальный универсальный идентификатор профиля пользователя (версия 4)
+                  example: 1e85e4f2-a371-4e59-8f4f-9b5596c28158
+                surname:
+                  type: string
+                  description: Фамилия пользователя
+                  example: Иванов
+                name:
+                  type: string
+                  description: Имя пользователя
+                  example: Иван
+                patronymic:
+                  type: string
+                  description: Отчество пользователя
+                  example: Иванович
+                birthday:
+                  type: string
+                  description: Дата рождения. Формат - ISO
+                  example: 2000-12-31T00:00:00.000Z
+                mail:
+                  type: string
+                  description: Рабочая почта
+                  example: it-rost.test-user@mail.ru
+                image:
+                  type: string
+                  description: Ссылка на фото профиля
+                  example: /static/img/profiles/79308323-9818-49dd-8925-b41e63216451.png
+                jobInformation:
+                  type: object
+                  description: Информация о занимаемой пользователем должности
+                  properties:
+                    name:
+                      type: string
+                      description: Название должности
+                      example: Главный тестировщик
+                    description:
+                      type: string
+                      description: Описание должности
+                      example: Главный тестировщик в компании. Лично на себе испытывает все доступные и внедряемые функции системы тестирования
+            testsResults:
+              type: array
+              description: Массив, содержащий в себе информацию об удачно написанных тестах, подтверждающих владение соответствующим навыком на указанном уровне
+              items:
+                oneOf:
+                  - type: object
+                    description: Информация о результате теста
+                    properties:
+                      isHumanVerified:
+                        type: boolean
+                        description: Поле, указывающее, был ли результат тестироавния проверен человеком
+                        example: false
+                      appointedTest:
+                        type: object
+                        description: Информация о назначенном тесте
+                        properties:
+                          UUID: 
+                            type: string
+                            description: Уникальный универсальный идентификатор теста (версия 4)
+                            example: ef99b401-ba52-4c1a-9127-703949c1575d
+                          createdAt: 
+                            type: string
+                            description: Дата и время назначения теста
+                            example: 2024-08-03T10:51:49.000Z
+                          updatedAt: 
+                            type: string
+                            description: Дата и время прохождения теста
+                            example: 2024-08-03T10:51:49.000Z
+                          testedSkill: 
+                            type: object
+                            description: Информация о тестируемом навыке
+                            properties:
+                              name:
+                                type: string
+                                description: Название навыка
+                                example: Flutter
+                              description:
+                                type: string
+                                description: Описание навыка
+                                example: Навыки владения языком Flutter
+                      resultLevel:
+                        type: object
+                        description: Информация о подтвержденном уровне владения навыком
+                        properties:
+                          name:
+                            type: string
+                            description: Название уровня
+                            example: Junior
+                          description:
+                            type: string
+                            description: Описание уровня
+                            example: Начинающий специалист с базовыми знаниями и навыками. Может выполнять простейшие задачи под руководством более опытных коллег.
+                          priority:
+                            type: integer
+                            description: Приоритет уровня навыка. В случае, когда пользователь повышал уровень владения навыком, из двух записей, насчет одного и того же навыка, отобразить ту, у которой приоритет уровня владения выше
+                            example: 1
+                  - type: string
+                    nullable: true
+                    description: Значение null в массиве, указывающее на неподтвержденный навык. Проигнорировать и не отображать
+                    example: null
+    UserProfile:
+      type: object
+      properties:
+        jobTitleUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        userUUID:
+          type: string
+          example: "1e85e4f2-a371-4e59-8f4f-9b5596c28158"
+        surname:
+          type: string
+          example: "Иванов"
+        name:
+          type: string
+          example: "Иван"
+        patronymic:
+          type: string
+          example: "Иванович"
+        birthday:
+          type: string
+          format: date
+          example: "2000-01-01"
+        mail:
+          type: string
+          example: "ivanov@example.com"
+        image:
+          type: string
+          example: "/path/to/photo.jpg"
+
+    JobTitle:
+      type: object
+      properties:
+        UUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        name:
+          type: string
+          example: "Главный тестировщик"
+        description:
+          type: string
+          example: "Описание должности"
+        vacantNum:
+          type: integer
+          example: 5
+
+    JobHardSkill:
+      type: object
+      properties:
+        UUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        skillUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        jobTitleUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        requirements:
+          type: string
+          example: "Знание Flutter на уровне Junior"
+
+    HardSkillTest:
+      type: object
+      properties:
+        UUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        name:
+          type: string
+          example: "Тест по Flutter"
+        description:
+          type: string
+          example: "Тест на проверку навыков владения Flutter"
+        skillUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        infoJSON:
+          type: object
+          example: {}
+        questionsJSON:
+          type: object
+          example: {}
+
+    HardSkill:
+        type: object
+        properties:
+          UUID:
+            type: string
+            example: "ee36e733-774a-47ce-b54f-037ce631e531"
+          name:
+            type: string
+            example: "Flutter"
+          description:
+            type: string
+            example: "Навыки владения языком Flutter"
+    
+    Feedback:
+      type: object
+      properties:
+        UUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        prevUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        message:
+          type: string
+          example: "Сообщение обращения"
+        image:
+          type: string
+          example: "/path/to/image.jpg"
+        status:
+          type: string
+          example: "открыто"
+        userUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+
+    Team:
+      type: object
+      properties:
+        UUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        name:
+          type: string
+          example: "Новая команда"
+        leaderUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        description:
+          type: string
+          example: "Описание команды"
+  
+  securitySchemes:
+    JWTCookie:
+      type: apiKey
+      in: cookie
+      name: jwt

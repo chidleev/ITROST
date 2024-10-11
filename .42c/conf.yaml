@@ -1,0 +1,3 @@
+apis:
+  swagger.yml:
+    alias: it-rost-api

@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Управление результатами и назначение
+        link(rel="stylesheet", href="/testsystem/static/css/style.css")
+        link(rel="stylesheet", href="/testsystem/static/css/multiSelect.css")
+        link(rel="stylesheet", href="/testsystem/static/css/resultsStyle.css")
+        script(src="/script/axios/dist/axios.min.js")
+    body 
+        #background
+        include headers.pug
+
+        nav.category 
+                #verified.button Только неподтвержденные
+                select#fio-search(name='fio-search')
+                select#skill-search(name='skill-search')
+                select#level-search(name='level-search')
+                select#scheduled-search(name='scheduled-search')
+        
+        #main
+            
+        #footer 
+            p “Айти Рост” - система грейдирования и построения матрицы компетенций
+            p Разработано командой “Бюро изумительных идей” в рамках дисциплины “Введение в инженерную деятельность” Таганрог 2024
+
+    script(src="/testsystem/static/js/multiSelect.js") 
+    script(src="/testsystem/static/js/results.js") 
+    

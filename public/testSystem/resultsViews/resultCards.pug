@@ -1,0 +1,33 @@
+each result in results 
+    .result(id=result.UUID)
+        nav.info
+            - var imageSrc = result.testedPersonCreditals.profileInformation?.image || '/static/img/profiles/default.svg';
+            img(src=imageSrc, alt="", height="50px")
+            .fio-job
+                a(href=`/profile/${result.testedPersonCreditals.login}`, target='_blank').fio #{result.testedPersonCreditals.profileInformation.surname} #{result.testedPersonCreditals.profileInformation.name} #{result.testedPersonCreditals.profileInformation.patronymic}
+                .job= result.testedPersonCreditals.profileInformation.jobInformation.name
+            .scheduled 
+                | Назначен: #{(new Date(result.createdAt)).toLocaleDateString('ru-ru')}
+                br
+                | Сроком до: #{result.deadline ? (new Date(result.deadline)).toLocaleDateString('ru-ru') : '---'}
+            
+        .content 
+            .skill 
+                span Навык: 
+                span= result.appointedTest.testedSkill.name
+            - var resultLevel = result.resultLevel?.name ?? false
+            .result-level 
+                span Результат: 
+                span(class=resultLevel ? '' : "unanswered")= resultLevel ? resultLevel : "отсутствует"
+            if resultLevel
+                - var endAt = result.answerJSON?.endAt ?? false
+                .endAt Дата прохождения: #{endAt ? (new Date(endAt)).toLocaleDateString('ru-ru') : '---'}
+                - var userScore = (result.answerJSON.userScore + result.answerJSON.userSelfrate).toFixed(2)
+                - var maxScore = (result.answerJSON.maxScore + result.answerJSON.maxSelfrate).toFixed(2)
+                .score Количество баллов: #{userScore} из #{maxScore}
+                .verified
+                    span Подтвержден: 
+                    span(class=result.isHumanVerified? "" : "prohibition") #{result.isHumanVerified? "да" : "нет"}
+                a(href=`/testsystem/results/${result.UUID}/view`) Просмотр
+            else 
+                .button.prohibition(onClick='deleteResult("'+result.UUID+'")') Удалить назначение

@@ -1,0 +1,244 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Авторизация
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        style.
+            @import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Inter;
+                user-select: none;
+                color: var(--dark-blue);
+                scrollbar-width: thin;
+                scrollbar-color: var(--light-blue) rgba(0, 0, 0, 0);
+            }
+
+            body {
+                --light-grey: rgb(230, 240, 255);
+                --grey: rgb(200, 210, 230);
+                --dark-grey: rgb(100, 110, 130);
+                --light-blue: rgb(115, 200, 255);
+                --blue: rgb(0, 80, 160);
+                --dark-blue: rgb(0, 50, 100);
+                --red: #c80000;
+                --green: #00964b;
+
+                width: 100vw;
+                height: 100svh;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: stretch;
+
+                overflow-x: hidden;
+            }
+
+            #background {
+                width: 100vw;
+                height: 100dvh;
+                position: fixed;
+
+                background-image: url('../background.jpg');
+                filter: hue-rotate(-15deg) brightness(90%) blur(25px);
+                background-position: center;
+                background-attachment: fixed;
+                background-size: 1000px;
+                z-index: -1;
+            }
+
+            #content {
+                padding: 5px;
+
+                flex: 1;
+                width: 70vmax;
+                max-width: 100%;
+                height: 100%;
+
+                align-self: center;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+            }
+
+            #logo {
+                margin-bottom: 7vw;
+                margin-top: 7vw;
+                padding-bottom: 1vw;
+
+                width: 100%;
+
+                font-size: 7vw;
+                font-weight: 900;
+                text-align: center;
+
+                color: white;
+
+                border-radius: 10px;
+                text-shadow: 
+                    0px 0.5vw 0px var(--light-blue),
+                    0px 1.0vw 0px var(--blue);
+            }
+
+            .underlay {
+                padding: 10px;
+
+                width: min(500px, 100%);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: stretch;
+                gap: 10px;
+
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            .underlay>h2 {
+                text-align: center;
+            }
+
+            .underlay>input {
+                padding: 10px 0px;
+
+                width: 100%;
+
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: medium;
+                text-align: center;
+
+                background-color: var(--light-grey);
+                outline: none;
+                border: none;
+                border-radius: 10px;
+            }
+
+            .button {
+                padding: 10px 0px;
+
+                width: 100%;
+
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                color: white;
+                background-color: var(--light-blue);
+
+                border-radius: 10px;
+
+                transition: 0.1s;
+            }
+
+            .button:hover {
+                background-color: var(--dark-blue);
+            }
+
+            .button:active {
+                scale: 0.95;
+                color: var(--light-blue);
+            }
+
+            .button[disabled] {
+                scale: 1;
+                color: var(--grey);
+                background-color: var(--dark-grey);
+            }
+
+            #footer {
+                min-height: 40px;
+
+                padding: 5px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 5px;
+
+                font-size: x-small;
+
+                background-color: var(--blue);
+                border-radius: 10px 10px 0px 0px;
+            }
+
+            #footer p:first-child {
+                flex: 2;
+                color: white;
+            }
+
+            #footer p:last-child {
+                text-align: right;
+                flex: 3;
+                color: white;
+            }
+
+            @media (orientation: portrait) {
+                #content {
+                    width: 100vw;
+                }
+                
+                #logo {
+                    font-size: 15vw;
+                    margin-top: 25vw;
+                    margin-bottom: 25vw;
+                    text-shadow: 
+                    0px 1vw 0px var(--light-blue),
+                    0px 2vw 0px var(--blue);
+                }
+
+                #footer {
+                    font-size: xx-small;
+                }
+            }
+    body 
+        #background
+        
+        #content
+            h2#logo Айти Рост
+            .underlay
+                h2 Войти в аккаунт
+                input#login(type="text", placeholder="Логин")
+                input#password(type="password", placeholder="Пароль")
+                .button(onclick="login()") Войти
+        #footer 
+            p “Айти Рост” - система грейдирования и построения матрицы компетенций
+            p Разработано командой “Бюро изумительных идей” в рамках дисциплины “Введение в инженерную деятельность” Таганрог 2024
+
+        script.
+            const searchParams = new URLSearchParams(window.location.search);
+
+            if (searchParams.get('login') && searchParams.get('password')) {
+                axios.post('/api/login', {
+                    login: searchParams.get('login'),
+                    password: searchParams.get('password')
+                }).then(result => {
+                    window.location.replace(`/profile`);
+                }).catch(error => {
+                    console.log(error);
+                })
+            }
+
+            function login() {
+                axios.post('/api/login', {
+                    login: document.getElementById('login')?.value,
+                    password: document.getElementById('password')?.value
+                }).then(result => {
+                    window.location.replace(`/profile`);
+                }).catch(error => {
+                    console.log(error);
+                })
+            }

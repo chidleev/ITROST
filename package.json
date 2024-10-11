@@ -1,0 +1,36 @@
+{
+  "name": "it-rost",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
+    "express": "~4.16.1",
+    "express-logger": "^0.0.3",
+    "fetch": "^1.1.0",
+    "fs": "^0.0.1-security",
+    "g4f": "^1.4.6",
+    "http-errors": "~1.6.3",
+    "jsonfile": "^6.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.0",
+    "path": "^0.12.7",
+    "pg": "^8.12.0",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.3",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^4.7.5",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^10.0.0",
+    "validator": "^13.12.0",
+    "yaml": "^2.5.0"
+  }
+}

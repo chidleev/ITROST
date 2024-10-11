@@ -1,0 +1,101 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Подробная статистика
+        link(rel="stylesheet", href="/testsystem/static/css/style.css")
+        link(rel="stylesheet", href="/testsystem/static/css/multiSelect.css")
+        link(rel="stylesheet", href="/testsystem/static/css/resultsStyle.css")
+        script(src="/script/axios/dist/axios.min.js")
+    body
+        #background
+        include headers.pug
+
+        #content 
+            #questions
+                -for(var num = 1; num <= result.answerJSON.questionsCount; num++)
+                    - var noAnswer = result.answerJSON.unviewedQuestions.findIndex(a => a.ID == num) + 1;
+                    .question(id='question-answered-'+num, class=noAnswer? 'inactive' : '')= num
+            div
+                #sidebar 
+                    #answer-info
+                        #info-header
+                            select#answer-search(name='answer-search')
+                        #info-alltest
+                            #statistic 
+                                if result.answerJSON.disconnectReason
+                                    #end-successful.prohibition Тест завершен некорректно!
+                                    #disconnectReason Причина завершения: #{result.answerJSON.disconnectReason}
+                                else 
+                                    #end-successful Тест завершен корректно
+                                #start-at Тест начат: #{(new Date(result.answerJSON.startAt)).toLocaleDateString('ru-ru')} в #{(new Date(result.answerJSON.startAt)).toLocaleTimeString('ru-ru')}
+                                #start-at Тест окончен: #{(new Date(result.answerJSON.endAt)).toLocaleDateString('ru-ru')} в #{(new Date(result.answerJSON.endAt)).toLocaleTimeString('ru-ru')}
+                                #elapsed Суммарное время: #{Math.floor(result.answerJSON.elapsedTime / 60)} мин. #{Math.floor(result.answerJSON.elapsedTime % 60)} сек.
+                                #time-limit Ограничение по времени: #{Math.floor(result.answerJSON.timeLimit / 60)} мин. #{Math.floor(result.answerJSON.timeLimit % 60)} сек.
+                                #score Итоговый балл #{'('}тест#{')'}: #{result.answerJSON.userScore} из #{result.answerJSON.maxScore}
+                                #selfrate Итоговый балл #{'('}самооценка#{')'}: #{result.answerJSON.userSelfrate} из #{result.answerJSON.maxSelfrate}
+                                #result Результат: #{result.resultLevel.name}
+                            if !result.isHumanVerified
+                                .button(onClick='verifyResult()') Подтвердить прохождение
+                            .button.prohibition(onClick='deleteResult()') Удалить прохождение
+
+                        #info-content(hidden)
+                            img(src="", alt="Изображение вопроса")
+                            #info-type
+                            #info-correctAnswers
+                            #info-userAnswer
+                            #info-exactMatch
+                            #info-weight
+                            #info-score
+                            #info-autoCheckSuccess
+                            .button(onClick='hideAnswerInfo()') Скрыть
+                            
+                #history 
+                    - var lastTime = result.answerJSON.startAt
+                    each answer in result.answerJSON.answersHistory
+                        - const answerCheck = (answer.type == 'selfrate') ? (answer.userAnswerArray[0]?.answer ?? -1) + 1 : answer.score + 1;
+                        .answer(id=(answerCheck)? 'answered-'+answer.ID : 'unanswered-'+answer.ID, 
+                                class=(answerCheck)? 'answered' : 'unanswered',
+                                class=(answer.autoCheckSuccess || answer.type == 'selfrate')? 'success' : 'failed')
+                            .statistic
+                                if (answerCheck)
+                                    .text Вопрос №#{answer.ID}: #{answer.text}
+                                    div(id='answered-'+answer.ID+'-info' hidden)
+                                        div= answer.type
+                                        div= answer.image
+                                        div= answer.exactMatch
+                                        div= answer.weight
+                                        - const userAnswer = JSON.stringify(answer.userAnswerArray)
+                                        div= userAnswer
+                                        if answer.type == 'select'
+                                            div= answer.score
+                                            div= answer.autoCheckSuccess
+                                            - const correctAnswers = JSON.stringify(answer.correctAnswers)
+                                            div= correctAnswers
+                                        if answer.type == 'compare'
+                                            div= answer.score
+                                            div= answer.autoCheckSuccess
+                                            - const prompts = JSON.stringify(answer.prompts)
+                                            div= prompts
+                                        if answer.type == 'detailed'
+                                            div= answer.score
+                                            div= answer.autoCheckSuccess
+                                            - const expectedAnswers = JSON.stringify(answer.expectedAnswers)
+                                            div= expectedAnswers
+                                else
+                                    .text Вопрос №#{answer.ID}: #{'Просмотрено, ' + (answer.userAnswerArray.length ? 'промежуточный ответ' : 'без ответа')}
+                                
+                                - secondsOnQuestion = (Date.parse(answer.leftAt) - Date.parse(lastTime)) / 1000
+                                .time Время пребывания на странице вопроса: 
+                                    span #{Math.floor(secondsOnQuestion / 60)} мин. 
+                                    span #{Math.floor(secondsOnQuestion % 60)} сек.
+                                - lastTime = answer.leftAt
+
+        #footer 
+            p “Айти Рост” - система грейдирования и построения матрицы компетенций
+            p Разработано командой “Бюро изумительных идей” в рамках дисциплины “Введение в инженерную деятельность” Таганрог 2024
+    
+    script(src="/testsystem/static/js/multiSelect.js") 
+    script(src="/testsystem/static/js/animations.js")
+    script(src="/testsystem/static/js/detailedResult.js")

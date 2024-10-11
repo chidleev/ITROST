@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Тестирование
+        link(rel="stylesheet", href="/testsystem/static/css/style.css")
+        script(src="https://cdn.socket.io/4.7.2/socket.io.min.js")
+        script(src="/script/axios/dist/axios.min.js") 
+    body 
+        #background
+        #header
+
+        #content
+            h2.prohibition Кажется, запрашиваемый Вами тест не существует, либо не был Вам назначен для прохождения
+            .underlay
+                p Если Вы считаете, что это не так, сообщите об этой ошибке администраторам сайта через форму обратной связи
+                a(href="/feedback").button Форма обратной связи
+        
+        #footer 
+            p “Айти Рост” - система грейдирования и построения матрицы компетенций
+            p Разработано командой “Бюро изумительных идей” в рамках дисциплины “Введение в инженерную деятельность” Таганрог 2024
