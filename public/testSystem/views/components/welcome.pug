@@ -1,0 +1,23 @@
+- var ending = ''
+if ((timeLimit / 60).toFixed(0) % 10 < 5 && (timeLimit / 60).toFixed(0) % 10 > 1)
+    - ending = 'ы'
+if ((timeLimit / 60).toFixed(0) % 10 == 1)
+    - ending = 'а'
+
+h2 #{name} 
+h2 Прочтите перед началом теста
+.underlay
+    p.indent #{description} 
+    p.bold Ограничение по времени: #{timeLimit >= 60 ? (timeLimit / 60).toFixed(0) + ' минут'+ending : 'отсутствует'}
+    p.bold Количество вопросов: #{questionsCount}
+    p.bold Возможность изменить ответ после подтверждения: #{canChangeChoice? 'да' : 'нет'}
+    p.bold Возможность просматривать вопросы: #{canSkipQuestions? 'да' : 'нет'}
+
+    h3.prohibition Запрещается: 
+    ul 
+        li Закрывать страницу
+        li Перезагружать страницу
+
+    p В случае нарушения требований тест будет завершен досрочно. Удачи! 
+    
+    #start-test.button(onclick='startTest()', disabled=true) Начать тест

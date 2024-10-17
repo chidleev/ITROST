@@ -1,0 +1,4 @@
+if timeLimit >= 60
+    span(id='time', seconds=timeLimit)= Math.floor(timeLimit / 60) + ':' + (timeLimit % 60).toString().padStart(2, '0')
+else 
+    span(id='time', seconds='0') 0:00

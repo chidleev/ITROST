@@ -1,0 +1,19 @@
+- var canSkipQuestionMassage = "Вы "+(canSkipQuestion?"":"НЕ ")+"можете перейти к другому вопросу"+(canSkipQuestion?"":", пока не ответите на этот");
+- var canChangeChoiceMassage = "Указав ответ, Вы "+(canChangeChoice?"":"НЕ ")+"сможете вернуться и изменить его, после того, как перейдете к другому вопросу";
+
+#question-header
+    img#skip(src="/testsystem/static/img/skip.svg", alt="Возможность пропустить вопрос", is-allow=(canSkipQuestion?1:0))
+    label(for="skip")=canSkipQuestionMassage
+    img#change(src="/testsystem/static/img/change_choice.svg", alt="Возможность изменить ответ", is-allow=(canChangeChoice?1:0))
+    label(for="change")=canChangeChoiceMassage
+    h3 Вопрос №#{number}:
+    
+#question.underlay
+    if (image)
+        img(src=image, alt="Изображение вопроса")
+    p.indent=text+" [0 - "+weight+"]"
+    input(type="number", min="0", max=weight, placeholder="0")
+
+textarea#answer(placeholder="Напишите пояснение (обоснование) к своей оценке", wrap="soft")
+
+include prev_next_btn.pug

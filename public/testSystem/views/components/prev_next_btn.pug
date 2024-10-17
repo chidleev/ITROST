@@ -1,0 +1,8 @@
+- var canSkip = canSkipQuestion || userAnswer.length
+
+#prev-next 
+    #previous.button(onclick="toggleQuestion(-1)") Предыдущий
+    if canSkip  
+        #next.button(onclick="toggleQuestion(1)") Следующий
+    else
+        #confirm.button(onclick="toggleQuestion(0)") Подтвердить

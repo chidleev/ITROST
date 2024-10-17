@@ -21,54 +21,13 @@ axios.get(`/testSystem/components`)
     pageData.content.html = errorHTML;
 })
 
-<<<<<<< HEAD
 const socket = io("https://it-rost.mooo.com", {
-=======
-    pageData.content.html = rawPageData.content.html;
-    for (const [key, value] of Object.entries(rawPageData.components)) {
-        pageData.components[key] = value;
-    }
-
-    document.getElementById('questions').innerHTML = pageData.components['questions_bar'];
-    document.getElementById('controls').innerHTML = pageData.components['controls'];
-
-    if (document.getElementById('time').hasAttribute('active')) 
-        document.getElementById('time').timeUpdater = setInterval(updateTimer, 1000);
-}
-else {
-    componentRequest('welcome').then(html => {
-        pageData.content.html = html;
-    });
-
-    componentRequest('questions_bar').then(html => {
-        document.getElementById('questions').innerHTML = html;
-        pageData.questionsCount = +document.querySelector('.question:last-child').innerText;
-        return componentRequest('timer');
-    }).then((html) => {
-        document.getElementById('timer').innerHTML = html;
-        pageData.components['controls'] = document.getElementById('controls').innerHTML;
-    })
-};
-
-const socket = io("https://it-rost.sytes.net", {
->>>>>>> d2d5661 (Сохранение ответов, редизайн)
     autoConnect: false
 });
 const testUuid = new URLSearchParams(window.location.search).get('uuid');
 var userAnswer = [];
 
-<<<<<<< HEAD
 if (Boolean(testUuid)) {
-=======
-var userAnswer = {
-    html: "",
-    data: []
-};
-
-const urlParams = new URLSearchParams(window.location.search);
-
-if (Boolean(urlParams.get('uuid'))) {
->>>>>>> d2d5661 (Сохранение ответов, редизайн)
     socket.auth = {
         testUuid: testUuid
     }
@@ -79,77 +38,6 @@ else {
     window.close();
 };
 
-<<<<<<< HEAD
-=======
-socket.on('test session registered', () => {
-    document.getElementById('start-test').removeAttribute('disabled');
-});
-
-function startTest() {
-    document.getElementById('exit-test').removeAttribute('disabled');
-
-    if (!document.getElementById('time').hasAttribute('active') && +document.getElementById('time').getAttribute('seconds') >= 60) {
-        document.getElementById('time').timeUpdater = setInterval(updateTimer, 1000);
-        document.getElementById('time').setAttribute('active', '');
-    }
-
-    document.querySelectorAll('.question').forEach(question => {
-        question.addEventListener('click', viewQuestion);
-    })
-
-    document.querySelector('.question:first-child').classList.remove('inactive');
-    document.querySelector('.question:first-child').dispatchEvent(new Event('click'));
-    socket.emit('start test');
-};
-
-socket.on('question response', (questionResponse) => {
-    if (questionResponse.questionData) {
-        userAnswer.data = questionResponse.questionData.userAnswer ?? [];
-        userAnswer.html = questionResponse.questionData.html ?? "";
-
-        if (!userAnswer.html) {
-            axios.post('/testing-session/component/question', questionResponse.questionData)
-            .then(response => {
-                pageData.content.html = response.data;
-                userAnswer.html = response.data;
-                initializeQuestion(questionResponse.questionData.type);
-            })
-            .catch(error => {
-                const errorHTML = `<div class="prohibition">${error.response.data}, сообщите об этой ошибке администраторам сайта через форму обратной связи</div>`;
-                pageData.content.html = errorHTML;
-            });
-        } else {
-            pageData.content.html = userAnswer.html;
-            initializeQuestion(questionResponse.questionData.type);
-        }
-    }
-
-    document.querySelector(`#question-${questionResponse.questionData.number}`)?.classList.add('active');
-    document.querySelectorAll('.question').forEach(question => {
-        if (!questionResponse.questionsSelection.includes(+question.innerText) && !question.classList.contains('active')) {
-            question.classList.add('inactive');
-        } else {
-            question.classList.remove('inactive');
-        }
-    })
-});
-
-socket.on('answer saved', (questionNumber) => {
-    document.querySelector(`#question-${questionNumber}`)?.classList.add('answered');
-});
-
-
-socket.on('timeout', () => {
-    alert('Время на прохождение теста вышло!');
-    document.querySelectorAll('.question').forEach(question => {
-        if (!question.classList.contains('active')) {
-            question.classList.add('inactive');
-        }
-    })
-    window.removeEventListener('beforeunload', preventExit);
-});
-
->>>>>>> d2d5661 (Сохранение ответов, редизайн)
 socket.on('test doesnt exist', () => {
     alert('Не возможно начать тестирование, тест с указанным UUID не найден, сообщите об этой ошибке администраторам сайта через форму обратной связи. Данная страница будет закрыта.');
     window.close();
@@ -219,7 +107,6 @@ socket.on('answer not saved', (data) => {
     document.querySelector(`#question-${data.questionNumber}`)?.classList.remove('answered');
 });
 
-<<<<<<< HEAD
 socket.on('question response', async (questionResponse) => {
     if (questionResponse.questionData) {
         userAnswer = questionResponse.questionData.userAnswer;
@@ -365,33 +252,29 @@ async function exitTest() {
         window.location.replace(`/testSystem/feedback?sessionID=${socket.id}`);
     })
 }
-=======
-
->>>>>>> d2d5661 (Сохранение ответов, редизайн)
 
 function selectThis(id, isMultipleSelect) {
     if (isMultipleSelect) {
-        if (userAnswer.data.includes(id)) {
-            userAnswer.data.splice(userAnswer.data.indexOf(id), 1);
+        if (userAnswer.includes(id)) {
+            userAnswer.splice(userAnswer.indexOf(id), 1);
             document.getElementById('answer-'+id).classList.remove('selected');
         } else {
-            userAnswer.data.push(id);
+            userAnswer.push(id);
             document.getElementById('answer-'+id).classList.add('selected');
         }
     }
     else {
-        if (userAnswer.data.includes(id)) {
-            userAnswer.data = [];
+        if (userAnswer.includes(id)) {
+            userAnswer = [];
             document.getElementById('answer-'+id).classList.remove('selected');
         } else {
-            document.getElementById('answer-'+userAnswer.data[0])?.classList.remove('selected');
-            userAnswer.data = [id];
+            document.getElementById('answer-'+userAnswer[0])?.classList.remove('selected');
+            userAnswer = [id];
             document.getElementById('answer-'+id).classList.add('selected');
         }
     }
 };
 
-<<<<<<< HEAD
 function toggleQuestion(step) {
     if (step == 0) {
         if (userAnswer.length > 0) {
@@ -431,86 +314,6 @@ function toggleQuestion(step) {
                 });
             }
         }
-=======
-function initializeQuestion(type) {
-    switch (type) {
-        case 'select':
-            userAnswer.data.forEach(id => {
-                document.getElementById('answer-'+id).classList.add('selected');
-            })
-            break;
-    
-        case 'compare':
-            document.querySelectorAll('.prompt>select').forEach(selector => {
-                selector.answerPair = userAnswer.data.find((pair) => {
-                    return pair.promptID == +selector.getAttribute('prompt');
-                }) ?? null;
-
-                if (selector.answerPair) {
-                    selector.value = selector.answerPair.answerID;
-                } else {
-                    selector.answerPair = {
-                        promptID: +selector.getAttribute('prompt'),
-                        answerID: 0
-                    }
-                    //userAnswer.data.push(selector.answerPair)
-                }
-
-                selector.addEventListener('change', (e) => {
-                    const pairIndex = userAnswer.data.indexOf(e.target.answerPair);
-
-                    if (pairIndex > -1) {
-                        userAnswer.data[pairIndex].answerID = +e.target.value;
-                    } else {
-                        selector.answerPair.answerID = +e.target.value;
-                        userAnswer.data.push(selector.answerPair)
-                    }
-                });
-            })
-            break;
-
-        case 'selfrate':
-            //инициализация оценки
-        case ('detailed'):
-            const textarea = document.querySelector('textarea');
-            textarea.value = userAnswer.data[0] ?? ""
-
-            bindCodeEditorShortcutKeys(textarea);
-            textarea.addEventListener('input', (e) => {
-                userAnswer.data[0] = e.target.value;
-            });
-            break;
-    }
-}
-
-function toggleQuestion(step) {
-    const nextNumber = +document.querySelector('.question.active')?.innerText + step;
-    if (nextNumber > 0 && nextNumber <= pageData.questionsCount) {
-        const nextQuestion = document.querySelector(`#question-${nextNumber}`);
-        if (!nextQuestion.classList.contains('inactive')) {
-            nextQuestion.dispatchEvent(new Event('click'));
-            document.getElementById('questions').scrollBy({
-                left: 60 * step,
-                behavior: "smooth"
-            });
-        } else {
-            toggleQuestion(step + Math.sign(step));
-        }
-    }
-}
-
-function viewQuestion(event) {
-    if (!event.target.classList.contains('inactive') && !event.target.classList.contains('active')) {
-        const currentQuestion = document.querySelector('.question.active') ?? null;
-        if (currentQuestion) {
-            socket.emit('save my answer', {
-                questionNumber: currentQuestion.innerText,
-                ...userAnswer
-            })
-            currentQuestion.classList.remove('active');
-        }
-        socket.emit('question request', event.target.innerText);
->>>>>>> d2d5661 (Сохранение ответов, редизайн)
     }
 };
 

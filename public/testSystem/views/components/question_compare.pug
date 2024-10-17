@@ -1,0 +1,14 @@
+include questions_header.pug
+
+#prompts
+    each prompt in prompts
+        .prompt.underlay(id='prompt-'+prompt.ID)
+            if (prompt.image)
+                img(src=prompt.image, alt="Изображение промпта")
+            p.indent=prompt.text
+            select(id='answer-'+prompt.ID, prompt=prompt.ID)
+                option(value='0', disabled=true, selected=true) Варианты ответов
+                each answer in answers 
+                    option(value=answer.ID)=answer.text
+
+include prev_next_btn.pug

@@ -1,0 +1,13 @@
+//- - var currentIndex = questionsCount
+//- while testInfo.shuffling && currentIndex != 0 
+        - var randomIndex = Math.floor(Math.random() * currentIndex)
+        - currentIndex--
+        -[testQuestions[currentIndex], testQuestions[randomIndex]] = [testQuestions[randomIndex], testQuestions[currentIndex]];
+
+//- if canSkipQuestions
+    each question, index in testQuestions
+        .question(id=question.ID, onclick='viewQuestion('+question.ID+')')= index + 1
+//- else 
+    
+-for(var num = 1; num <= questionsCount; num++)
+    .question.inactive(id='question-'+num)= num

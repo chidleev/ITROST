@@ -34,6 +34,19 @@ body {
     background-color: var(--light-grey);
 }
 
+#background {
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+
+    background-image: url('../img/background.jpg');
+    filter: hue-rotate(-15deg) brightness(90%) blur(25px);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 1000px;
+    z-index: -1;
+}
+
 .underlay {
     padding: 10px;
 

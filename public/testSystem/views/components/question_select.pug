@@ -1,0 +1,10 @@
+include questions_header.pug
+
+#answers
+    each answer in answers
+        .answer.underlay(id='answer-'+answer.ID, onclick='selectThis('+answer.ID+','+multipleSelect+')')
+            if (answer.image)
+                img(src=answer.image, alt="Изображение ответа")
+            p.indent=answer.text
+
+include prev_next_btn.pug

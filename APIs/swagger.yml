@@ -1797,6 +1797,72 @@ paths:
                       type: string
                       example: "Некорректно указан новый UUID тимлида"
 
+  /testsystem/schedule:
+    post:
+      summary: Назначение теста пользователю
+      description: Назначает тест пользователю на основе UUID теста и UUID пользователя
+      operationId: scheduleTest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                testUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+                userUUID:
+                  type: string
+                  example: "ee36e733-774a-47ce-b54f-037ce631e531"
+      responses:
+        "200":
+          description: Тест успешно назначен
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/HardSkillTestResult"
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: ""
+        "422":
+          description: Ошибка валидации
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Указан неверный UUID назначаемого теста"
+        "500":
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                    nullable: true
+                    example: null
+                  errorsArray:
+                    type: array
+                    items:
+                      type: string
+                      example: "Database error"
+
 components:
   schemas:
     UserInfo:
@@ -2182,6 +2248,16 @@ components:
         description:
           type: string
           example: "Описание команды"
+    
+    HardSkillTestResult:
+      type: object
+      properties:
+        userUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
+        testUUID:
+          type: string
+          example: "ee36e733-774a-47ce-b54f-037ce631e531"
   
   securitySchemes:
     JWTCookie:
