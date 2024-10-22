@@ -6,7 +6,17 @@ const logger = require('../../logs/logger');
 const adminValidator = require('../../APIs/validators').isAdmin;
 const runTestResultsChecker = require('../testResultsChecker');
 const dataBase = require('../../database');
-const { error } = require('console');
+
+const nodemailer = require('nodemailer');
+let transporter = nodemailer.createTransport({
+    host: 'mail7.serv00.com',
+    port: 587,
+    secure: false, // true для 465, false для других портов
+    auth: {
+        user: 'it-rost@dielve.serv00.net', // ваш email
+        pass: 'Chidleev182003' // ваш пароль
+    }
+});
 
 const testResultsHandler = require('express')();
 testResultsHandler.set('views', path.join(__dirname, '..', '..', 'public', 'testSystem', 'resultsViews'));
@@ -94,8 +104,18 @@ testResultsHandler.post('/save', (req, res) => {
     jsonFile.readFile(filePath)
     .then(answerData => {
         runTestResultsChecker(answerData)
-        .then(data => {
+        .then(async data => {
             fs.unlinkSync(filePath);
+
+            var userResult, userCreditals, userProfile;
+            try {
+                userResult = await dataBase.HardSkillTestResults.findByPk(req.cookies.resultUuid);
+                userCreditals = await userResult.getTestedPersonCreditals();
+                userProfile = await userCreditals.getProfileInformation();
+            } catch (error) {
+                console.log(error);
+            }
+
             dataBase.HardSkillTestResults.update({
                 answerJSON: data.result,
                 totalScore: data.result.userScore.toFixed(2),
@@ -104,6 +124,21 @@ testResultsHandler.post('/save', (req, res) => {
                 where: {
                     UUID: req.cookies.resultUuid
                 }
+            })
+            .then(result => {
+                let mailOptions = {
+                    from: '"IT Rost Notification" <it-rost@dielve.serv00.net>', // адрес отправителя
+                    to: userProfile.mail, // список получателей
+                    subject: 'Проверка теста завершена', // тема письма
+                    text: `Здравствуйте, ${userProfile.name} ${userProfile.surname}, уведомляем Вас о том, что тест от ${data.result.startAt} прошел автоматическую проверку и ожидает подтверждения администратором. \nПредварительный балл: ${data.result.userScore.toFixed(2)} из ${data.result.maxScore.toFixed(2)}. \nБаллы самооценки: ${data.result.userSelfrate.toFixed(2)}. \nНапоминаем, что итоговый балл может быть скорректирован администраторами. \n\nДанное сообщение было создано автоматически и не требует ответа.`, // текст письма
+                    html: `<div>Здравствуйте, ${userProfile.name} ${userProfile.surname}, уведомляем Вас о том, что тест от ${data.result.startAt} прошел автоматическую проверку и ожидает подтверждения администратором. \nПредварительный балл: ${data.result.userScore.toFixed(2)} из ${data.result.maxScore.toFixed(2)}. <br>Баллы самооценки: ${data.result.userSelfrate.toFixed(2)}. <br>Напоминаем, что итоговый балл может быть скорректирован администраторами. <br><br>Данное сообщение было создано автоматически и не требует ответа.</div>` // html версия письма
+                };
+
+                transporter.sendMail(mailOptions, (error, info) => {
+                    if (error) {
+                        console.log(error);
+                    }
+                });
             })
         })
         res.send();

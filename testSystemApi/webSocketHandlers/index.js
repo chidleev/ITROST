@@ -3,8 +3,18 @@ const jsonFile = require("jsonfile");
 const path = require("path");
 const fs = require("fs");
 
-const hardSkillTests = require('../../database').HardSkillTests;
-const hardSkillTestResults = require('../../database').HardSkillTestResults;
+const nodemailer = require('nodemailer');
+let transporter = nodemailer.createTransport({
+    host: 'mail7.serv00.com',
+    port: 587,
+    secure: false, // true для 465, false для других портов
+    auth: {
+        user: 'it-rost@dielve.serv00.net', // ваш email
+        pass: 'Chidleev182003' // ваш пароль
+    }
+});
+
+const dataBase = require('../../database');
 
 const runTestResultsChecker = require('../testResultsChecker');
 
@@ -29,7 +39,8 @@ module.exports.initialize = (server) => {
 
     io.on('connect', (socket) => {
         //добавить проверку, что тест действительно назначен
-        hardSkillTests.findByPk(socket.testUuid).then(result => {
+        dataBase.HardSkillTests.findByPk(socket.testUuid)
+        .then(result => {
             if (result) {
                 if (result.infoJSON.shuffling) {
                     result.questionJSON = shuffle(result.questionJSON);
@@ -203,9 +214,19 @@ function registerEvents(socket) {
                 fs.unlinkSync(socket.filePath);
                 if (socket.test.resultUUID) {
                     runTestResultsChecker(socket.test)
-                    .then(data => {
+                    .then(async data => {
                         data.result.disconnectReason = reason;
-                        hardSkillTestResults.update({
+
+                        var userResult, userCreditals, userProfile;
+                        try {
+                            userResult = await dataBase.HardSkillTestResults.findByPk(socket.test.resultUUID);
+                            userCreditals = await userResult.getTestedPersonCreditals();
+                            userProfile = await userCreditals.getProfileInformation();
+                        } catch (error) {
+                            console.log(error);
+                        }
+                        
+                        dataBase.HardSkillTestResults.update({
                             answerJSON: data.result,
                             totalScore: data.result.userScore.toFixed(2),
                             resultLevelUUID: data.levelUUID
@@ -213,6 +234,21 @@ function registerEvents(socket) {
                             where: {
                                 UUID: socket.test.resultUUID
                             }
+                        })
+                        .then(result => {
+                            let mailOptions = {
+                                from: '"IT Rost Notification" <it-rost@dielve.serv00.net>', // адрес отправителя
+                                to: userProfile.mail, // список получателей
+                                subject: 'Проверка теста завершена', // тема письма
+                                text: `Здравствуйте, ${userProfile.name} ${userProfile.surname}, уведомляем Вас о том, что тест от ${data.result.startAt} прошел автоматическую проверку и ожидает подтверждения администратором. \nПредварительный балл: ${data.result.userScore.toFixed(2)} из ${data.result.maxScore.toFixed(2)}. \nБаллы самооценки: ${data.result.userSelfrate.toFixed(2)}. \nНапоминаем, что итоговый балл может быть скорректирован администраторами. \n\nДанное сообщение было создано автоматически и не требует ответа.`, // текст письма
+                                html: `<div>Здравствуйте, ${userProfile.name} ${userProfile.surname}, уведомляем Вас о том, что тест от ${data.result.startAt} прошел автоматическую проверку и ожидает подтверждения администратором. \nПредварительный балл: ${data.result.userScore.toFixed(2)} из ${data.result.maxScore.toFixed(2)}. <br>Баллы самооценки: ${data.result.userSelfrate.toFixed(2)}. <br>Напоминаем, что итоговый балл может быть скорректирован администраторами. <br><br>Данное сообщение было создано автоматически и не требует ответа.</div>` // html версия письма
+                            };
+            
+                            transporter.sendMail(mailOptions, (error, info) => {
+                                if (error) {
+                                    console.log(error);
+                                }
+                            });
                         })
                     })
                 }
